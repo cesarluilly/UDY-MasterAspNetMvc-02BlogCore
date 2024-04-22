@@ -22,8 +22,11 @@ Tambien ya me configura las Dependencias
 
 ![1713750902373](image/README/1713750902373.png)
 
-### Video 32 Creacion de la libreria de clases
+### Video 32 Creacion de las libreria de clases
 
+Vamos a utilizar la arquitectura por capas.
+
+![1713751386227](image/README/1713751386227.png)
 
 ### Video 33 Instalacion de Extensiones necesarias
 
