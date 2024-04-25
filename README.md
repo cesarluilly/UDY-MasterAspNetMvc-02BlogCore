@@ -160,6 +160,13 @@ https://learn.microsoft.com/es-es/aspnet/mvc/overview/older-versions/getting-sta
 
 ### Video 44 Implementando Repository Parte 1
 
+* Agregamos la carpeta Repository dentro de la capa AccesoDatos/Data
+  * Creamos la carpeta IRepository
+    * Creamos el interfaz IRepository Generico con su contenido
+  * Creamos la clase Repository Generico con su contenido
+
+![1714052115454](image/README/1714052115454.png)
+
 ### Video 45 Implementando Repository Parte 2
 
 ### Video 46 Repositorio Categoria
