@@ -38,7 +38,6 @@ Vamos a utilizar la arquitectura por capas.
 
 ![1714011003331](image/README/1714011003331.png)
 
-
 ### Video 34 Organizacion del Proyecto en Areas
 
 * **Creo dos areas de MVC llamados Admin y Cliente**
@@ -63,6 +62,18 @@ Vamos a utilizar la arquitectura por capas.
 ![1714013139757](image/README/1714013139757.png)
 
 ### Video 35 Organizacion del Proyecto por niveles
+
+* **Movemos el modelo a su correspondiente capa**
+* **La carpeta Data la movemos a su correspondiente capa**
+* **La carpeta Migration lo dejo al mismo nivel jerarquico que Data**
+* Agrego una referencia al Proyecto de BlogCore para que tenga acceso a la capa "AccesoDatos"
+* Agrego una referencia al Proyecto de Acceso a datos para que tenga dependencia con
+
+  * Models
+  * Utilidades
+* Creamos la carpeta ViewModes en el proyecto de Models
+
+  ![1714015592873](image/README/1714015592873.png)
 
 ### Video 36 Configuracion de Bootstrap y Bootswatch
 
