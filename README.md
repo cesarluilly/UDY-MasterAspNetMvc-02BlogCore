@@ -30,20 +30,23 @@ Vamos a utilizar la arquitectura por capas.
 
 ### Video 33 Instalacion de Extensiones necesarias
 
+![1714010517887](image/README/1714010517887.png)
+
+![1714010639816](image/README/1714010639816.png)
+
+![1714010812764](image/README/1714010812764.png)
+
+![1714011003331](image/README/1714011003331.png)
+
 
 ### Video 34 Organizacion del Proyecto en Areas
 
-
 ### Video 35 Organizacion del Proyecto por niveles
-
 
 ### Video 36 Configuracion de Bootstrap y Bootswatch
 
-
 ### Video 37 Instalacion de Plugins Frontend
 
-
 ### Video 38 Conexion SQL, Contexto, Migraciones y Base de Datos
-
 
 ### Video 39 Creacion Modelo Categoria, Migracion y Base de Datos
