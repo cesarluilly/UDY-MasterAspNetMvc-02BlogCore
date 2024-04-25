@@ -119,4 +119,17 @@ ofrece templates con sus respectivos colores y efectos(Atomos, Moleculas, Organi
 
 ### Video 38 Conexion SQL, Contexto, Migraciones y Base de Datos
 
+Renderizo una vista parcial con la etiqueta
+
+````<partial name="_LoginPartial" />``
+
+Configuramos nuestra cadena de conexion
+
+
+![1714048570349](image/README/1714048570349.png)
+
+Ejecutamos el comando en el Command Nugget
+
+``Update-Database``
+
 ### Video 39 Creacion Modelo Categoria, Migracion y Base de Datos
