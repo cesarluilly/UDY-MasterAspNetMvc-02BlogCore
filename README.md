@@ -119,9 +119,9 @@ ofrece templates con sus respectivos colores y efectos(Atomos, Moleculas, Organi
 
 ### Video 38 Conexion SQL, Contexto, Migraciones y Base de Datos
 
-Renderizo una vista parcial con la etiqueta
+Renderizo una vista parcial con la etiqueta en el _Layout.
 
-````<partial name="_LoginPartial" />``
+``<partial name="_LoginPartial" />``
 
 Configuramos nuestra cadena de conexion
 
