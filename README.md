@@ -41,6 +41,27 @@ Vamos a utilizar la arquitectura por capas.
 
 ### Video 34 Organizacion del Proyecto en Areas
 
+* **Creo dos areas de MVC llamados Admin y Cliente**
+
+![1714011156846](image/README/1714011156846.png)
+
+![1714011411684](image/README/1714011411684.png)
+
+**Hacemos cambios escructurales**
+
+* Muevo mi HomeController y mi vista al area cliente
+* Complemento en los ViewImports
+* Modifico el Programa para que apunte al controlador correcto
+* En el ControladorHome indico a que area pertenece
+
+![1714013017531](image/README/1714013017531.png)
+
+![1714013112434](image/README/1714013112434.png)
+
+![1714013059602](image/README/1714013059602.png)
+
+![1714013139757](image/README/1714013139757.png)
+
 ### Video 35 Organizacion del Proyecto por niveles
 
 ### Video 36 Configuracion de Bootstrap y Bootswatch
