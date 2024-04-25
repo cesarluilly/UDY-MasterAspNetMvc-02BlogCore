@@ -77,6 +77,30 @@ Vamos a utilizar la arquitectura por capas.
 
 ### Video 36 Configuracion de Bootstrap y Bootswatch
 
+Bootswatch es como la siguiente Fase de Bootstrap, ya que te ofrece todo lo de bootstrap y ademas te
+
+ofrece templates con sus respectivos colores y efectos(Atomos, Moleculas, Organismos)
+
+* Descargo la version minimizada
+* Creo un archivo de CSS dentro del directorio "wwwroot/lib/Bootstrap/dis/css/bootstrap5.min.css"
+  * Dentro pego el contenido de lo que descargamos
+* Vamos a la pagina maestra "_layout.cshtml"
+  * **Remuevo** la etiqueta link de "~/lib/bootstrap/dist/css/**bootstrap.min.css**"
+  * **Agrego** la etiqueta para el nuevo link de "~/lib/bootstrap/dist/css/**bootstrap5.min.css**"
+
+![1714016301817](image/README/1714016301817.png)
+
+![1714016331947](image/README/1714016331947.png)
+
+![1714017359167](image/README/1714017359167.png)
+
+**Recomendacion de nombre de controladores, EN PLURAL**
+
+* Elimino el nav que estaba en la pagina maestra
+* Agrego el nuevo Nav
+
+![1714018571660](image/README/1714018571660.png)
+
 ### Video 37 Instalacion de Plugins Frontend
 
 ### Video 38 Conexion SQL, Contexto, Migraciones y Base de Datos
