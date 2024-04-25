@@ -103,6 +103,20 @@ ofrece templates con sus respectivos colores y efectos(Atomos, Moleculas, Organi
 
 ### Video 37 Instalacion de Plugins Frontend
 
+* En la seccion anterior podemos crear tablas basicas, pero si queremos crear tablas mas avanzadas podemos utiliza el Plugin llamado **"DataTables"**
+* **sDataTables [CSS, JS]**
+* **JQuery [CSS, JS]**
+* **Toastr [CSS, JS]** muestra ventanitas
+* **sweetalert2[CSS, JS]** para mandar alertas
+* **fontawesome.com/icons[CSS]**
+* **cdnjs para encontrar las librerias**
+
+  Los CSS se importan al inicio de la pantalla
+
+  Los JS se importan al final de la pagina.
+
+![1714019114531](image/README/1714019114531.png)
+
 ### Video 38 Conexion SQL, Contexto, Migraciones y Base de Datos
 
 ### Video 39 Creacion Modelo Categoria, Migracion y Base de Datos
