@@ -133,3 +133,57 @@ Ejecutamos el comando en el Command Nugget
 ``Update-Database``
 
 ### Video 39 Creacion Modelo Categoria, Migracion y Base de Datos
+
+Se crear el Modelo Categoria
+
+## **Seccion 4: BlogCore - RepositoryPattern**
+
+### Video 40 Fundamentos de RepositoryPattern
+
+![1714050028142](image/README/1714050028142.png)
+
+### Video 41 Introduccion RepositoryPattern
+
+![1714050135737](image/README/1714050135737.png)
+
+### Video 42 Unidad contenedora o unidad de trabajo
+
+https://learn.microsoft.com/es-es/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
+
+![1714050203337](image/README/1714050203337.png)
+
+![1714050564405](image/README/1714050564405.png)
+
+### Video 43 Como es el Flujo de Trabajo con el RepositoryPattern
+
+![1714050685937](image/README/1714050685937.png)
+
+### Video 44 Implementando Repository Parte 1
+
+### Video 45 Implementando Repository Parte 2
+
+### Video 46 Repositorio Categoria
+
+### Video 47.0 Ejercicio de codificacion 2: Implementacion Patron de Repositorio (RepositoryPattern)
+
+### Video 47.1 Implementando Unidad de Trabajo (Unit Of Work)
+
+### Video 48
+
+### Video 49 
+
+### Video 50
+
+### Video 51 
+
+### Video 52
+
+### Video 53
+
+### Video 54 
+
+### Video 55
+
+### Video 56
+
+### Video 57
