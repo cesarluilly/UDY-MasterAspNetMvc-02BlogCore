@@ -125,7 +125,6 @@ Renderizo una vista parcial con la etiqueta en el _Layout.
 
 Configuramos nuestra cadena de conexion
 
-
 ![1714048570349](image/README/1714048570349.png)
 
 Ejecutamos el comando en el Command Nugget
@@ -169,6 +168,48 @@ https://learn.microsoft.com/es-es/aspnet/mvc/overview/older-versions/getting-sta
 
 ### Video 45 Implementando Repository Parte 2
 
+```}}
+public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, string? includeProperties = null)
+{
+    //                                              //Se crea una consulta IQueryable a partir del DBSet del 
+    //                                              //    contexto.
+    IQueryable<T> query = dbSet;
+
+    if (
+        //                                          //Existe el filtro.
+        filter != null
+        )
+    {
+        query = query.Where(filter);
+    }
+
+    //                                              //Se incluyen propiedades de navegacion si se proporciona.
+    if (
+        includeProperties != null
+        )
+    {
+        //                                          //Take each includeProperty
+        foreach (var includeProperty in 
+            includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+        {
+            query = query.Include(includeProperty);
+        }
+    }
+
+    //                                              //Se aplica el ordenamiento si se proporciona.
+    if (
+        orderBy != null
+        )
+    {
+        //                                          //Se ejecuta la funcion y se convierte la consulta
+        //                                          //    en una lista.
+        return orderBy(query).ToList();
+    }
+
+    return query.ToList();
+}
+```
+
 ### Video 46 Repositorio Categoria
 
 ### Video 47.0 Ejercicio de codificacion 2: Implementacion Patron de Repositorio (RepositoryPattern)
@@ -177,17 +218,17 @@ https://learn.microsoft.com/es-es/aspnet/mvc/overview/older-versions/getting-sta
 
 ### Video 48
 
-### Video 49 
+### Video 49
 
 ### Video 50
 
-### Video 51 
+### Video 51
 
 ### Video 52
 
 ### Video 53
 
-### Video 54 
+### Video 54
 
 ### Video 55
 
