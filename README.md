@@ -384,7 +384,8 @@ function cargarDataTable() {
 
 Ahora si ya podemos correr nuestra aplicacion
 
-![1714253681206](image/README/1714253681206.png)
+![1714255917911](image/README/1714255917911.png)
+
 
 ### Video 51 Metodo y Vista Crear Categoria
 
