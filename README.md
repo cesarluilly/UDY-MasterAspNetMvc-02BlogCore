@@ -380,6 +380,12 @@ function cargarDataTable() {
 
 ### Video 50 Agregar Contenedor de Trabajo como Inyeccion de Dependencias
 
+![1714253647156](image/README/1714253647156.png)
+
+Ahora si ya podemos correr nuestra aplicacion
+
+![1714253681206](image/README/1714253681206.png)
+
 ### Video 51 Metodo y Vista Crear Categoria
 
 ### Video 52 Funcionalidad Crear Nueva Categoria
