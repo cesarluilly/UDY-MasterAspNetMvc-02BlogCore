@@ -253,6 +253,11 @@ public void Remove(T entity)
 
 ### Video 46 Repositorio Categoria
 
+* Se agrego la Interfaz ICategoria
+* Se agrego la clase Categoria
+
+![1714194034378](image/README/1714194034378.png)
+
 ### Video 47.0 Ejercicio de codificacion 2: Implementacion Patron de Repositorio (RepositoryPattern)
 
 ### Video 47.1 Implementando Unidad de Trabajo (Unit Of Work)
