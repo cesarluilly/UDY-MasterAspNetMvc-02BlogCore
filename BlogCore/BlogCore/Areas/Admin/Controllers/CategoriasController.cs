@@ -1,4 +1,5 @@
 ﻿using BlogCore.AccesoDatos.Data.Repository.IRepository;
+using BlogCore.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogCore.Areas.Admin.Controllers
@@ -22,6 +23,22 @@ namespace BlogCore.Areas.Admin.Controllers
         {
             return View();
         }
+
+        //--------------------------------------------------------------------------------------------------------------
+        //                                                  //Metodo sirve para mostrar el formulario
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        //[HttpPost]
+        //                                                  //Metodo sirve para recibir los datos y crear el registro.
+        //public IActionResult Create(Categoria categoria)
+        //{
+        //    return View(categoria);
+        //}
 
         #region LLamadas a la API
         //--------------------------------------------------------------------------------------------------------------

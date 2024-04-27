@@ -388,6 +388,19 @@ Ahora si ya podemos correr nuestra aplicacion
 
 ### Video 51 Metodo y Vista Crear Categoria
 
+* Agregamos el Action Create en el controlador Categoria
+* Creamos la vista parcial "_VistaCrearVolver"
+
+  * Esto se hace posicionandonos en carpeta "Shared" damos click derecho y escojemos agregar Vista vacio
+  * Para renderizar la vista hacemos uso de la etiqueta partial `<partial name="_VistaCrearVolver" />`
+
+  ![1714258651506](image/README/1714258651506.png)
+
+  ![1714258546255](image/README/1714258546255.png)
+
+![1714258624122](image/README/1714258624122.png)
+
+
 ### Video 52 Funcionalidad Crear Nueva Categoria
 
 ### Video 53 Editar Categoria
