@@ -294,6 +294,90 @@ Nota. El nombre de los controladores lleva el nombre
 
 ### Video 49 Crear Vista Lista de Categorias
 
+Liga para la implementacion de DataTable -> https://datatables.net/examples/data_sources/js_array
+
+![1714228477866](image/README/1714228477866.png)
+
+![1714228494985](image/README/1714228494985.png)
+
+![1714228511235](image/README/1714228511235.png)
+
+![1714228534604](image/README/1714228534604.png)
+
+![1714252630007](image/README/1714252630007.png)
+
+Documento Categoria.js
+
+```javascript
+let dataTable;
+
+$(document).ready(function () {
+    cargarDataTable();
+});
+
+function cargarDataTable() {
+    //Para mas ejemplos. Consultar la siguiente liga.
+    //https://datatables.net/examples/ajax/objects.html
+    dataTable = $("#tblCategorias").dataTable({
+        "ajax": {
+            "url": "admin/categorias/GetAll",
+            "type": "GET",
+            "datatype":"json"
+        },
+        "colums": [
+            { "data": "id", "width": "5%"},
+            { "data": "nombre", "width": "50%"},
+            { "data": "orden", "width": "20%" },
+            {
+                "dataId": "id",
+                //Render ya es de datatable.
+              
+                "render": function (dataId) {
+                    //Utilizamos comillas invertidas para no tener problemas con las comillas dobles
+                    //    y tambien para acceder rapido a variables a traves del signo de pesos
+
+                    //&nbsp ----> es un espacio
+                    return `<div class="text-center>"
+                                <a href="/admin/Categorias/Edit/${dataId}" 
+                                    class="btn btn-success text-white" style="cursor:pointer; width:100px;"
+                                    <i class="far fa-edit"> Editar
+                                </a>
+                                 
+                                <a onclick=Delete("/Admin/Categorias/Delete/${dataId}")
+                                    class="btn btn-danger text-white" style="cursor:pointer; width:100px;"
+                                    <i class="far fa-trahs-alt"> Borrar
+                                </a>
+                            </div>
+
+                                `;
+                }, "width": "30%"
+            },
+        ],
+        "language": {
+            "decimal": "",
+            "emptyTable": "No hay registros",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+            "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+            "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "Mostrar _MENU_ Entradas",
+            "loadingRecords": "Cargando...",
+            "processing": "Procesando...",
+            "search": "Buscar:",
+            "zeroRecords": "Sin resultados encontrados",
+            "paginate": {
+                "first": "Primero",
+                "last": "Ultimo",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        },
+        "width": "100%"
+    });
+}
+```
+
 ### Video 50 Agregar Contenedor de Trabajo como Inyeccion de Dependencias
 
 ### Video 51 Metodo y Vista Crear Categoria
