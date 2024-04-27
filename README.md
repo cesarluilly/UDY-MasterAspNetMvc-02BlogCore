@@ -318,9 +318,9 @@ $(document).ready(function () {
 function cargarDataTable() {
     //Para mas ejemplos. Consultar la siguiente liga.
     //https://datatables.net/examples/ajax/objects.html
-    dataTable = $("#tblCategorias").dataTable({
+    dataTable = $("#tblCategorias").DataTable({
         "ajax": {
-            "url": "admin/categorias/GetAll",
+            "url": "/admin/categorias/GetAll",
             "type": "GET",
             "datatype":"json"
         },
@@ -338,20 +338,19 @@ function cargarDataTable() {
 
                     //&nbsp ----> es un espacio
                     return `<div class="text-center>"
-                                <a href="/admin/Categorias/Edit/${dataId}" 
-                                    class="btn btn-success text-white" style="cursor:pointer; width:100px;"
-                                    <i class="far fa-edit"> Editar
+                                <a href="/Admin/Categorias/Edit/${dataId}" 
+                                    class="btn btn-success text-white" style="cursor:pointer; width:140px;">
+                                    <i class="far fa-edit"></i> Editar
                                 </a>
                                  
                                 <a onclick=Delete("/Admin/Categorias/Delete/${dataId}")
-                                    class="btn btn-danger text-white" style="cursor:pointer; width:100px;"
-                                    <i class="far fa-trahs-alt"> Borrar
+                                    class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
+                                    <i class="far fa-trahs-alt"></i> Borrar
                                 </a>
                             </div>
-
                                 `;
-                }, "width": "30%"
-            },
+                }, "width": "40%"
+            }
         ],
         "language": {
             "decimal": "",
