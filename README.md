@@ -208,6 +208,47 @@ public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, Func<IQue
 
     return query.ToList();
 }
+
+public T GetFirstOfDefault(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
+{
+    //                                              //Se crea una consulta IQueryable a partir del DBSet del 
+    //                                              //    contexto.
+    IQueryable<T> query = dbSet;
+
+    if (
+        //                                          //Existe el filtro.
+        filter != null
+        )
+    {
+        query = query.Where(filter);
+    }
+
+    //                                              //Se incluyen propiedades de navegacion si se proporciona.
+    if (
+        includeProperties != null
+        )
+    {
+        //                                          //Take each includeProperty
+        foreach (var includeProperty in
+            includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+        {
+            query = query.Include(includeProperty);
+        }
+    }
+
+    return query.FirstOrDefault();
+}
+
+public void Remove(int id)
+{
+    T entityToRemove = dbSet.Find(id);
+}
+
+public void Remove(T entity)
+{
+    dbSet.Remove(entity);
+}
+
 ```
 
 ### Video 46 Repositorio Categoria
