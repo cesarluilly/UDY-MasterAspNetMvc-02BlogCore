@@ -256,11 +256,23 @@ public void Remove(T entity)
 * Se agrego la Interfaz ICategoria
 * Se agrego la clase Categoria
 
+![1714225086240](image/README/1714225086240.png)
+
 ![1714194034378](image/README/1714194034378.png)
 
 ### Video 47.0 Ejercicio de codificacion 2: Implementacion Patron de Repositorio (RepositoryPattern)
 
 ### Video 47.1 Implementando Unidad de Trabajo (Unit Of Work)
+
+Es un patron que se utiliza para gestionar transaciones en un conjunto de operaciones, asegura 
+
+que todas las unidades de trabajo, se ejecuten en una transacion.
+
+![1714225237921](image/README/1714225237921.png)
+
+![1714225279348](image/README/1714225279348.png)
+
+![1714225440537](image/README/1714225440537.png)
 
 ### Video 48
 
