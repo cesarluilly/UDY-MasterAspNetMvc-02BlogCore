@@ -274,22 +274,40 @@ que todas las unidades de trabajo, se ejecuten en una transacion.
 
 ![1714225440537](image/README/1714225440537.png)
 
-### Video 48
+### Video 48 Crear Controlador Categorias
 
-### Video 49
+Nota. El nombre de los controladores lleva el nombre 
 
-### Video 50
+* Agregamos controlador MVC en blanco en el area de Admin
+  * Lo primero que debemos hacer despues de crear un controlador, es ponerle el area al cual pertenece [Area("Admin")]
+  * Agregamos su contenido
 
-### Video 51
+![1714226660542](image/README/1714226660542.png)
 
-### Video 52
+![1714226733967](image/README/1714226733967.png)
 
-### Video 53
+* Agregamos la vista razor vacia del controlador del metodo Index.
 
-### Video 54
+  ![1714226813224](image/README/1714226813224.png)
 
-### Video 55
 
-### Video 56
+
+### Video 49 Crear Vista Lista de Categorias
+
+### Video 50 Agregar Contenedor de Trabajo como Inyeccion de Dependencias
+
+### Video 51 Metodo y Vista Crear Categoria
+
+### Video 52 Funcionalidad Crear Nueva Categoria
+
+### Video 53 Editar Categoria
+
+### Video 54 Borrar Categoria
+
+### Video 55 Validacion del Lado del Servidor
+
+### Video 56 Validacion del Lado del Cliente
+
+## Seccion 6: BlogCore: CRUD Articulos
 
 ### Video 57

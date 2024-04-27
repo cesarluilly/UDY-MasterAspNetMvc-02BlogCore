@@ -30,7 +30,10 @@ namespace BlogCore.AccesoDatos.Data.Repository
             return this.dbSet.Find(id);
         }
 
-        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, string? includeProperties = null)
+        public IEnumerable<T> GetAll(
+            Expression<Func<T, bool>>? filter = null, 
+            Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, 
+            string? includeProperties = null)
         {
             //                                              //Se crea una consulta IQueryable a partir del DBSet del 
             //                                              //    contexto.
