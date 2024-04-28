@@ -455,6 +455,14 @@ function Delete(url) {
 
 ### Video 55 Validacion del Lado del Servidor
 
+Esta validacion se logra 
+
+* ```c#
+  `if (ModelState.IsValid)
+  ```
+* ```c#
+  <div asp-validation-summary="All" class="text-danger"></div>` O <div asp-validation-summary="ModelOnly" class="text-danger"></div> 
+  ```
 
 ![1714330486835](image/README/1714330486835.png)
 
@@ -464,6 +472,22 @@ function Delete(url) {
 
 
 ### Video 56 Validacion del Lado del Cliente
+
+Prestamos atencion al archivo que se creo cuando creamos el proyecto `_ValidationScriptsPartial`
+
+![1714331610879](image/README/1714331610879.png)
+
+Importamos el archivo en los lugares donde deseemos realizar una validacion, por lo general es
+
+en los servicios de tipo POST.
+
+![1714332124303](image/README/1714332124303.png)
+
+Ahora corremos la aplicacion y tecleamos un valor en el Orden, y si nos fijamos sin haberle dado click en el
+
+boton "Crear Categoria", la validacion se hace en automatico
+
+![1714332166236](image/README/1714332166236.png)
 
 ## Seccion 6: BlogCore: CRUD Articulos
 
