@@ -455,6 +455,14 @@ function Delete(url) {
 
 ### Video 55 Validacion del Lado del Servidor
 
+
+![1714330486835](image/README/1714330486835.png)
+
+![1714330532212](image/README/1714330532212.png)
+
+![1714330461024](image/README/1714330461024.png)
+
+
 ### Video 56 Validacion del Lado del Cliente
 
 ## Seccion 6: BlogCore: CRUD Articulos
