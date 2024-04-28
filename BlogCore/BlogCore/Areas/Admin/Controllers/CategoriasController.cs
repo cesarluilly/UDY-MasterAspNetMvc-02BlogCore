@@ -101,6 +101,26 @@ namespace BlogCore.Areas.Admin.Controllers
 
             return Json( new { data = _unitOfWork.CategoriaRepo.GetAll()});
         }
+
+        //--------------------------------------------------------------------------------------------------------------
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+
+            Categoria categoria = _unitOfWork.CategoriaRepo.Get(id);
+
+            if (
+                categoria == null
+                )
+            {
+                return Json(new {success = false, message = "Error borrando categoria"});
+            }
+
+            _unitOfWork.CategoriaRepo.Remove(categoria);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Categoria Borrada Correctamente" });
+        }
+
         #endregion  
     }
 }

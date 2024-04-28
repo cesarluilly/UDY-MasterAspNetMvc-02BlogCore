@@ -62,3 +62,51 @@ function cargarDataTable() {
         "width": "100%"
     });
 }
+
+
+function Delete(url) {
+    swal({
+        title: "Esta seguro de borrar?",
+        text: "Este contenido no se puede recuperar!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Si, borrar!",
+        closeOnconfirm: true
+    }, function () {
+        $.ajax({
+            type: 'DELETE',
+            url: url,
+            success: function (data) {
+                if (data.success) {
+                    toastr.success(data.message);
+                    dataTable.ajax.reload();
+                }
+                else {
+                    toastr.error(data.message);
+                }
+            }
+        });
+    });
+}
+
+
+//function Delete2(url2) {
+//    Swal.fire({
+//        title: "Are you sure?",
+//        text: "You won't be able to revert this!",
+//        icon: "warning",
+//        showCancelButton: true,
+//        confirmButtonColor: "#3085d6",
+//        cancelButtonColor: "#d33",
+//        confirmButtonText: "Yes, delete it!"
+//    }).then((result) => {
+//        if (result.isConfirmed) {
+//            Swal.fire({
+//                title: "Deleted!",
+//                text: "Your file has been deleted.",
+//                icon: "success"
+//            });
+//        }
+//    });
+//}

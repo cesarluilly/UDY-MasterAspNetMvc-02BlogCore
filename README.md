@@ -264,7 +264,7 @@ public void Remove(T entity)
 
 ### Video 47.1 Implementando Unidad de Trabajo (Unit Of Work)
 
-Es un patron que se utiliza para gestionar transaciones en un conjunto de operaciones, asegura 
+Es un patron que se utiliza para gestionar transaciones en un conjunto de operaciones, asegura
 
 que todas las unidades de trabajo, se ejecuten en una transacion.
 
@@ -276,7 +276,7 @@ que todas las unidades de trabajo, se ejecuten en una transacion.
 
 ### Video 48 Crear Controlador Categorias
 
-Nota. El nombre de los controladores lleva el nombre 
+Nota. El nombre de los controladores lleva el nombre
 
 * Agregamos controlador MVC en blanco en el area de Admin
   * Lo primero que debemos hacer despues de crear un controlador, es ponerle el area al cual pertenece [Area("Admin")]
@@ -289,8 +289,6 @@ Nota. El nombre de los controladores lleva el nombre
 * Agregamos la vista razor vacia del controlador del metodo Index.
 
   ![1714226813224](image/README/1714226813224.png)
-
-
 
 ### Video 49 Crear Vista Lista de Categorias
 
@@ -384,7 +382,6 @@ Ahora si ya podemos correr nuestra aplicacion
 
 ![1714255917911](image/README/1714255917911.png)
 
-
 ### Video 51 Metodo y Vista Crear Categoria
 
 * Agregamos el Action Create en el controlador Categoria
@@ -399,7 +396,6 @@ Ahora si ya podemos correr nuestra aplicacion
 
 ![1714258624122](image/README/1714258624122.png)
 
-
 ### Video 52 Funcionalidad Crear Nueva Categoria
 
 * Crear el Action de Edit de tipo [GET] y su Vista(La vista es una copia del del Create)
@@ -407,13 +403,55 @@ Ahora si ya podemos correr nuestra aplicacion
 
 ![1714270421847](image/README/1714270421847.png)
 
-
-
-
-
 ### Video 53 Editar Categoria
 
 ### Video 54 Borrar Categoria
+
+Agregamos Librerias Sweetalert y Toast js y css
+
+```html
+Al inicio
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+
+Al final
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+```
+
+Creamos el Action de Delete
+
+![1714329436702](image/README/1714329436702.png)
+
+Agregamos la funcion de Javascript de Delete, que va a ser invocado en el metodo
+
+```javascript
+function Delete(url) {
+    swal({
+        title: "Esta seguro de borrar?",
+        text: "Este contenido no se puede recuperar!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Si, borrar!",
+        closeOnconfirm: true
+    }, function () {
+        $.ajax({
+            type: 'DELETE',
+            url: url,
+            success: function (data) {
+                if (data.success) {
+                    toastr.success(data.message);
+                    dataTable.ajax.reload();
+                }
+                else {
+                    toastr.error(data.message);
+                }
+            }
+        });
+    });
+}
+```
 
 ### Video 55 Validacion del Lado del Servidor
 
