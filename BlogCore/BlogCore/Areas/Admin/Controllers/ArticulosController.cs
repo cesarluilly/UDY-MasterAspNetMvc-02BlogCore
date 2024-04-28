@@ -16,8 +16,16 @@ namespace BlogCore.Areas.Admin.Controllers
             this._unitOfWork = unitOfWork;
         }
 
+        //--------------------------------------------------------------------------------------------------------------
         [HttpGet]
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        [HttpGet]
+        public IActionResult Create()
         {
             return View();
         }

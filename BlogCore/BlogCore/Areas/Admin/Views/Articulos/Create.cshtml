@@ -1,12 +1,12 @@
-﻿@model  BlogCore.Models.Categoria
+﻿@model BlogCore.Models.Articulo
 
 @{
-    ViewData["Title"] = "Crear Categoria";
+    ViewData["Title"] = "Crear Articulo";
 }
 
 <br />
 <br />
-<h3 class="text-center">Crear una categoria</h3>
+<h3 class="text-center">Crear un nuevo Articulo</h3>
 <form method="POST" asp-action="Create">
     <div class="row px-2 offset-1 border">
         @* <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
@@ -24,11 +24,11 @@
 
         <div class="col-10 offset-1 mt-4">
             <div class="form-group row">
-                <label asp-for="Orden"></label>
+                <label asp-for="Descripcion"></label>
             </div>
             <div class="col-8">
-                <input asp-for="Orden" class="form-control" placeholder="Ingresa el orden" />
-                <span asp-validation-for="Orden" class="text-danger"></span>
+                <input asp-for="Descripcion" class="form-control" placeholder="Ingresa la descripcion" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
         </div>
 
@@ -41,11 +41,11 @@
 </form>
 
 
-@section Scripts{
-    @* Realiza los datos(modelo Categoria) del lado del cliente 
+@section Scripts {
+    @* Realiza los datos(modelo Categoria) del lado del cliente
         de manera automatica
     *@
     @{
-    <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial" />
     }
 }
