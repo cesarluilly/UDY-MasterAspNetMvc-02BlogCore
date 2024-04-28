@@ -500,7 +500,19 @@ boton "Crear Categoria", la validacion se hace en automatico
 
 ### Video 58 Repositorio Articulo y Unidad de trabajo
 
+* Creamos el Repo de Articulo
+* Agregamos el Repo de Articulo al UnitOfWork
+
 ### Video 59 Controlador y Lista de Articulos
+
+* Agregamos controlador de Articulos
+* Agregamos Vista de Articulos
+* Agregamos archivo Javascript de Articulo
+* Insertamos un Articulo insert into articulo values('Nom1', 'Desc', GETDATE(), 'TestRuta', 5);
+
+![1714342796409](image/README/1714342796409.png)
+
+![1714342540585](image/README/1714342540585.png)
 
 ### Video 60 Formulario para Crear Articulo
 

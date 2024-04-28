@@ -15,6 +15,7 @@ namespace BlogCore.AccesoDatos.Data.Repository.IRepository
         //                                                  //    no se necesite.
 
         public ICategoriaRepository CategoriaRepo { get; }
+        public IArticuloRepository ArticuloRepo { get; }
 
         void Save();
     }

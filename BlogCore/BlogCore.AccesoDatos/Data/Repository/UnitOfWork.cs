@@ -14,6 +14,10 @@ namespace BlogCore.AccesoDatos.Data.Repository
         private readonly ApplicationDbContext _dbContext;
 
         //--------------------------------------------------------------------------------------------------------------
+        public ICategoriaRepository CategoriaRepo { get; private set; }
+        public IArticuloRepository ArticuloRepo { get; private set; }
+
+        //--------------------------------------------------------------------------------------------------------------
         public UnitOfWork(
             
             ApplicationDbContext dbContext
@@ -21,10 +25,8 @@ namespace BlogCore.AccesoDatos.Data.Repository
         {
             this._dbContext = dbContext;
             CategoriaRepo = new CategoriaRepository(_dbContext);
+            ArticuloRepo = new ArticuloRepository(_dbContext);
         }
-
-        //--------------------------------------------------------------------------------------------------------------
-        public ICategoriaRepository CategoriaRepo { get; private set; }
 
         //--------------------------------------------------------------------------------------------------------------
         public void Dispose()

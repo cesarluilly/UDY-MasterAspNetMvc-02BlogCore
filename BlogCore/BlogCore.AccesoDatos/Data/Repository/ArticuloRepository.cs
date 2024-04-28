@@ -9,22 +9,24 @@ using System.Threading.Tasks;
 
 namespace BlogCore.AccesoDatos.Data.Repository
 {
-    public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
+    public class ArticuloRepository : Repository<Articulo>, IArticuloRepository
     {
         private readonly ApplicationDbContext _dbContext;
 
         //--------------------------------------------------------------------------------------------------------------
-        public CategoriaRepository(ApplicationDbContext dbContext) : base(dbContext) 
+        public ArticuloRepository(ApplicationDbContext dbContext) : base(dbContext) 
         {
                 this._dbContext = dbContext;
         }
 
         //--------------------------------------------------------------------------------------------------------------
-        public void Update(Categoria categoria)
+        public void Update(Articulo articulo)
         {
-            Categoria entity = this._dbContext.Categoria.FirstOrDefault(s => s.Id == categoria.Id);
-            entity.Nombre = categoria.Nombre;
-            entity.Orden = categoria.Orden;
+            Articulo articuloEntity = this._dbContext.Articulo.FirstOrDefault(s => s.Id == articulo.Id);
+            articuloEntity.Nombre = articulo.Nombre;
+            articuloEntity.Descripcion = articulo.Descripcion;
+            articuloEntity.UrlImagen = articulo.UrlImagen;
+            articuloEntity.CategoriaId = articulo.CategoriaId;
 
             //this._dbContext.SaveChanges();
         }
