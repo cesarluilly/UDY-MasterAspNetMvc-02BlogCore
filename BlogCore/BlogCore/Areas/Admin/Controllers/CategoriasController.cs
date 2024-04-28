@@ -33,12 +33,27 @@ namespace BlogCore.Areas.Admin.Controllers
         }
 
         //--------------------------------------------------------------------------------------------------------------
-        //[HttpPost]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         //                                                  //Metodo sirve para recibir los datos y crear el registro.
-        //public IActionResult Create(Categoria categoria)
-        //{
-        //    return View(categoria);
-        //}
+        public IActionResult Create(Categoria categoria)
+        {
+            //                                              //Validamos los datos del modelo
+            if (ModelState.IsValid)
+            {
+                //                                          //Logica para guardar en la DB.
+                _unitOfWork.CategoriaRepo.Add(categoria);
+                _unitOfWork.Save();
+
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                //                                          //En caso de un error, mandara la misma vista de Create
+            }
+
+            return View(categoria);
+        }
 
         #region LLamadas a la API
         //--------------------------------------------------------------------------------------------------------------

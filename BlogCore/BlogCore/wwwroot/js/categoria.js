@@ -13,32 +13,30 @@ function cargarDataTable() {
             "type": "GET",
             "datatype":"json"
         },
-        "colums": [
+        "columns": [
             { "data": "id", "width": "5%"},
             { "data": "nombre", "width": "50%"},
             { "data": "orden", "width": "20%" },
             {
-                "dataId": "id",
+                "data": "id",     
                 //Render ya es de datatable.
-                
-                "render": function (dataId) {
+                "render": function (data) {
                     //Utilizamos comillas invertidas para no tener problemas con las comillas dobles
                     //    y tambien para acceder rapido a variables a traves del signo de pesos
 
                     //&nbsp ----> es un espacio
-                    return `<div class="text-center>"
-                                <a href="/Admin/Categorias/Edit/${dataId}" 
-                                    class="btn btn-success text-white" style="cursor:pointer; width:140px;">
+                    return `<div class="text-center">
+                                <a href="/Admin/Categorias/Edit/${data}" class="btn btn-success text-white" style="cursor:pointer; width:140px;">
                                     <i class="far fa-edit"></i> Editar
                                 </a>
                                 &nbsp;
-                                <a onclick=Delete("/Admin/Categorias/Delete/${dataId}")
-                                    class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
-                                    <i class="far fa-trahs-alt"></i> Borrar
+                                <a onclick=Delete("/Admin/Categorias/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
+                                    <i class="far fa-trash-alt"></i> Borrar
                                 </a>
                             </div>
-                                `;
-                }, "width": "40%"
+                            `;
+                }, 
+                "width": "40%"
             }
         ],
         "language": {
