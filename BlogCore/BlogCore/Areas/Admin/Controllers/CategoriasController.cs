@@ -55,11 +55,50 @@ namespace BlogCore.Areas.Admin.Controllers
             return View(categoria);
         }
 
+        //--------------------------------------------------------------------------------------------------------------
+        //                                                  //Metodo sirve para mostrar el formulario para editar
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Categoria categoria = _unitOfWork.CategoriaRepo.Get(id);
+
+            if (categoria == null)
+            {
+                return NotFound();
+            }
+
+            return View(categoria);
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+        //                                                  //Metodo sirve para recibir el id para poderlo editar.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Categoria categoria)
+        {
+            //                                              //Validamos los datos del modelo
+            if (ModelState.IsValid)
+            {
+                //                                          //Logica para actualizar en la DB.
+                _unitOfWork.CategoriaRepo.Update(categoria);
+                _unitOfWork.Save();
+
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                //                                          //En caso de un error, mandara la misma vista de Create
+            }
+
+            return View(categoria);
+        }
+
         #region LLamadas a la API
         //--------------------------------------------------------------------------------------------------------------
         [HttpGet]
         public IActionResult GetAll()
         {
+
             return Json( new { data = _unitOfWork.CategoriaRepo.GetAll()});
         }
         #endregion  

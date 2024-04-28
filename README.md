@@ -402,7 +402,10 @@ Ahora si ya podemos correr nuestra aplicacion
 
 ### Video 52 Funcionalidad Crear Nueva Categoria
 
+* Crear el Action de Edit de tipo [GET] y su Vista(La vista es una copia del del Create)
+* Creamos el Action de Edit de tipo [POST] para poder editar la categoria
 
+![1714270421847](image/README/1714270421847.png)
 
 
 
