@@ -491,4 +491,69 @@ boton "Crear Categoria", la validacion se hace en automatico
 
 ## Seccion 6: BlogCore: CRUD Articulos
 
-### Video 57
+### Video 57 Crear Modelo Articulo, Migracion y Base de Datos
+
+* Creamos Modelo Articulo
+* Agregamos Articulo en el contexto
+
+  ![1714334498561](image/README/1714334498561.png)
+
+### Video 58 Repositorio Articulo y Unidad de trabajo
+
+### Video 59 Controlador y Lista de Articulos
+
+### Video 60 Formulario para Crear Articulo
+
+### Video 61 Lista de categorias al crear Articulo
+
+### Video 62 Implementar Subida de Archivo - Parte 1
+
+### Video 63 Implementar Subida de Archivo - Parte 2
+
+### Video 64 Integrar Editor Tinymce
+
+### Video 65 Vista Editar articulo e Imagen
+
+### Video 66 Funcionalidad Editar Articulo e Imagen
+
+### Video 67 Funcionalidad Borrar articulo
+
+### Video 68 Mostrar Imagen en Datatable
+
+## Seccion 7: Depuracion o Debug
+
+### Video 69
+
+### Video 70 
+
+### Video 71
+
+### Video 72 
+
+### Video 73
+
+### Video 74
+
+### Video 75
+
+### Video 76 
+
+### Video 77
+
+### Video 78
+
+### Video 79
+
+### Video 80
+
+### Video 81
+
+### Video 82
+
+### Video 83
+
+### Video 84 
+
+### Video 85
+
+### Video 86
