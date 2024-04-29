@@ -559,6 +559,20 @@ Vamos a correr la aplicacion
 
 ### Video 62 Implementar Subida de Archivo - Parte 1
 
+(NOTA. Se iso un acomodo bien de las etiquetas que habia anteriormente.)
+
+Agregamos al Form el atributo -> enctype="multipart/form-data"
+
+![1714350346654](image/README/1714350346654.png)
+
+Agregamos la etiqueta. 
+
+![1714350419031](image/README/1714350419031.png)
+
+Corremos la aplicacion
+
+![1714350521625](image/README/1714350521625.png)
+
 ### Video 63 Implementar Subida de Archivo - Parte 2
 
 ### Video 64 Integrar Editor Tinymce
