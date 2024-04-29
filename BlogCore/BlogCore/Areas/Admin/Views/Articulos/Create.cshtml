@@ -1,4 +1,4 @@
-﻿@model BlogCore.Models.Articulo
+﻿@model BlogCore.Models.ViewModels.ArticuloVM
 
 @{
     ViewData["Title"] = "Crear Articulo";
@@ -14,21 +14,46 @@
 
         <div class="col-10 offset-1 mt-4">
             <div class="form-group row">
-                <label asp-for="Nombre"></label>
+                <label asp-for="Articulo.Nombre"></label>
             </div>
             <div class="col-8">
-                <input asp-for="Nombre" class="form-control" placeholder="Ingresa el nombre" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
+                <input asp-for="Articulo.Nombre" class="form-control" placeholder="Ingresa el nombre" />
+                <span asp-validation-for="Articulo.Nombre" class="text-danger"></span>
             </div>
         </div>
 
         <div class="col-10 offset-1 mt-4">
             <div class="form-group row">
-                <label asp-for="Descripcion"></label>
+                <label asp-for="Articulo.Descripcion"></label>
             </div>
             <div class="col-8">
-                <input asp-for="Descripcion" class="form-control" placeholder="Ingresa la descripcion" />
-                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                <input asp-for="Articulo.Descripcion" class="form-control" placeholder="Ingresa la descripcion" />
+                <span asp-validation-for="Articulo.Descripcion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group row mt-4">
+                <label for="Categoria">Categoria</label>
+            </div>
+            <div class="col-8">
+                @*                                          //1. @Html.DropDownListFor --> TagHelper que genera un 
+                    //                                      //    elemento select.
+
+                    //                                      //2. m => m.Articulo.CategoriaId --> Expresion Lamda que 
+                    //                                      //    indica la propiedad del modelo que este select
+                    //                                      //    representa.
+
+                    //                                      //3. Model.ListaCategorias --> Representa las opciones
+                    //                                      //    de la lista desplegable.
+
+                    //                                      //4. "-Por favor selecciona una categoría-" --> Primera opcion.
+
+                    //                                      //5. new { @class = "form-control"} --> Se le da estilos
+                    //                                      //    al select.
+                *@
+
+                @Html.DropDownListFor(m => m.Articulo.CategoriaId, Model.ListaCategorias, 
+                "-Por favor seleccion una categoria-", new { @class = "form-control"})
+                <span asp-validation-for="Articulo.CategoriaId" class="text-danger"></span>
             </div>
         </div>
 

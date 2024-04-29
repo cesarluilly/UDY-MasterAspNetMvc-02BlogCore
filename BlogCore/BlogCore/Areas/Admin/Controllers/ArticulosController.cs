@@ -1,5 +1,6 @@
 ﻿using BlogCore.AccesoDatos.Data.Repository.IRepository;
 using BlogCore.Models;
+using BlogCore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogCore.Areas.Admin.Controllers
@@ -27,7 +28,13 @@ namespace BlogCore.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            ArticuloVM artiVM = new ArticuloVM()
+            {
+                Articulo = new BlogCore.Models.Articulo(),
+                ListaCategorias = _unitOfWork.CategoriaRepo.GetListaCategorias()
+            };
+
+            return View(artiVM);
         }
 
         #region LLamadas a la API

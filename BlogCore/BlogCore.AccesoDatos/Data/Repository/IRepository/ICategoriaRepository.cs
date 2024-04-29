@@ -1,4 +1,5 @@
 ﻿using BlogCore.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,6 @@ namespace BlogCore.AccesoDatos.Data.Repository.IRepository
         //                                                  //    entidades se actualizen a traves del contexto y 
         //                                                  //    se guarden mediante el metodo saveChanges().
         void Update(Categoria categoria);
+        IEnumerable<SelectListItem> GetListaCategorias();
     }
 }

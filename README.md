@@ -524,6 +524,39 @@ boton "Crear Categoria", la validacion se hace en automatico
 
 ### Video 61 Lista de categorias al crear Articulo
 
+Para trabajar con 2 tablas en una misma vista, tengo que crear un ViewModel, y lo que nos va a permitir es traer
+
+datos de varias tablas.
+
+Nombre se define por 
+
+* Nombre de la entidad principal con la que quiero trabajar
+* Nombre identificador para ViewModel y puede ser
+  * "ViewModel"
+  * o Abreviado "VM"
+
+![1714345826405](image/README/1714345826405.png)
+
+![1714346024624](image/README/1714346024624.png)
+
+Despues de esto, tenemos que hacer un cambio en `ArticulosController` en el metodo `Create`.
+
+Para eso agregamos un metodo al Repositorio de Categoria
+
+![1714346756320](image/README/1714346756320.png)
+
+Agregamos el dropdown a traves del TagHelper @Html.DropDownListFor
+
+![1714348903638](image/README/1714348903638.png)
+
+
+Vamos a correr la aplicacion
+
+* En caso de que mande error, hay que instalar la siguiente extension
+  * ![1714348580236](image/README/1714348580236.png)
+
+![1714348847385](image/README/1714348847385.png)
+
 ### Video 62 Implementar Subida de Archivo - Parte 1
 
 ### Video 63 Implementar Subida de Archivo - Parte 2
