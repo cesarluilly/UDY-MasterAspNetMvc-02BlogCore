@@ -575,6 +575,26 @@ Corremos la aplicacion
 
 ### Video 63 Implementar Subida de Archivo - Parte 2
 
+![1714364242992](image/README/1714364242992.png)
+
+Agrego la propiedad  `private readonly IWebHostEnvironment _hostingEnviroment;`![1714364334301](image/README/1714364334301.png)
+
+Creamos el Action Create con implementacion para subir archivos
+
+![1714364601292](image/README/1714364601292.png)
+
+Corremos la app
+
+![1714364683394](image/README/1714364683394.png)
+
+Evidencia de guardado de registro
+
+![1714364756218](image/README/1714364756218.png)
+
+![1714364804708](image/README/1714364804708.png)
+
+![1714364854796](image/README/1714364854796.png)
+
 ### Video 64 Integrar Editor Tinymce
 
 ### Video 65 Vista Editar articulo e Imagen

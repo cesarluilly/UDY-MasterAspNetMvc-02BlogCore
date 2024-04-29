@@ -13,6 +13,6 @@ namespace BlogCore.Models.ViewModels
 
         //                                                  //SelectListItem es el que me va a permitir
         //                                                  //    crear el dropdown.
-        public IEnumerable<SelectListItem> ListaCategorias { get; set; }
+        public IEnumerable<SelectListItem>? ListaCategorias { get; set; }
     }
 }
