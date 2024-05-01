@@ -33,7 +33,7 @@
                     <label asp-for="Articulo.Descripcion"></label>
                 </div>
                 <div class="col-8">
-                    <input asp-for="Articulo.Descripcion" class="form-control" placeholder="Ingresa la descripcion" />
+                    <textarea asp-for="Articulo.Descripcion" class="form-control" style="height: 300px;"/> </textarea>
                     <span asp-validation-for="Articulo.Descripcion" class="text-danger"></span>
                 </div>
             </div>
@@ -91,10 +91,28 @@
 
 
 @section Scripts {
-    @* Realiza los datos(modelo Categoria) del lado del cliente
+    @* Realiza las validaciones de datos(modelo Categoria) del lado del cliente
         de manera automatica
     *@
     @{
         <partial name="_ValidationScriptsPartial" />
     }
+    
+    @* //                                                   //Agregamos  la biblioteca de tinymce importada desde cdnjs*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js" integrity="sha512-VCEWnpOl7PIhbYMcb64pqGZYez41C2uws/M/mDdGPy+vtEJHd9BqbShE4/VNnnZdr7YCPOjd+CBmYca/7WWWCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        tinymce.init({
+            //                                              //Elemento sobre el cual se va a implementar
+            //                                              //    el tinymce.
+            selector:'textarea',
+            //                                              //Par que cargue unos botones por defecto.
+            plugins:'lists',
+            //                                              //Agregamos el tipo de formato de menu
+            menubar:'file edit format'
+        });
+    </script>
+
+
+
 }

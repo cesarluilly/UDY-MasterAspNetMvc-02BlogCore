@@ -455,7 +455,7 @@ function Delete(url) {
 
 ### Video 55 Validacion del Lado del Servidor
 
-Esta validacion se logra 
+Esta validacion se logra
 
 * ```c#
   `if (ModelState.IsValid)
@@ -469,7 +469,6 @@ Esta validacion se logra
 ![1714330532212](image/README/1714330532212.png)
 
 ![1714330461024](image/README/1714330461024.png)
-
 
 ### Video 56 Validacion del Lado del Cliente
 
@@ -528,7 +527,7 @@ Para trabajar con 2 tablas en una misma vista, tengo que crear un ViewModel, y l
 
 datos de varias tablas.
 
-Nombre se define por 
+Nombre se define por
 
 * Nombre de la entidad principal con la que quiero trabajar
 * Nombre identificador para ViewModel y puede ser
@@ -549,7 +548,6 @@ Agregamos el dropdown a traves del TagHelper @Html.DropDownListFor
 
 ![1714348903638](image/README/1714348903638.png)
 
-
 Vamos a correr la aplicacion
 
 * En caso de que mande error, hay que instalar la siguiente extension
@@ -565,7 +563,7 @@ Agregamos al Form el atributo -> enctype="multipart/form-data"
 
 ![1714350346654](image/README/1714350346654.png)
 
-Agregamos la etiqueta. 
+Agregamos la etiqueta.
 
 ![1714350419031](image/README/1714350419031.png)
 
@@ -597,6 +595,38 @@ Evidencia de guardado de registro
 
 ### Video 64 Integrar Editor Tinymce
 
+* Cambiamos el input de nuestro input de Descripcion por un textarea
+* ![1714602131515](image/README/1714602131515.png)
+
+![1714601833092](image/README/1714601833092.png)
+
+* Procedemos a agregar Tinymce
+
+https://www.tiny.cloud/
+
+![1714595735150](image/README/1714595735150.png)
+
+* Vamos a la liga de cdnjs
+
+Que es un cdnjs?
+
+![1714596170614](image/README/1714596170614.png)![1714596193309](image/README/1714596193309.png)
+
+* y buscamos la libreria de tinymce
+
+![1714595970148](image/README/1714595970148.png)
+
+![1714596284452](image/README/1714596284452.png)
+
+* Vamos a nuestro proyecto y vamos a la vista Create de Articulos y en la seccion de script agregamos lo siguiente
+
+![1714602201858](image/README/1714602201858.png)
+
+Textarea con Tinymce asociado
+
+![1714602056141](image/README/1714602056141.png)
+
+
 ### Video 65 Vista Editar articulo e Imagen
 
 ### Video 66 Funcionalidad Editar Articulo e Imagen
@@ -609,11 +639,11 @@ Evidencia de guardado de registro
 
 ### Video 69
 
-### Video 70 
+### Video 70
 
 ### Video 71
 
-### Video 72 
+### Video 72
 
 ### Video 73
 
@@ -621,7 +651,7 @@ Evidencia de guardado de registro
 
 ### Video 75
 
-### Video 76 
+### Video 76
 
 ### Video 77
 
@@ -637,7 +667,7 @@ Evidencia de guardado de registro
 
 ### Video 83
 
-### Video 84 
+### Video 84
 
 ### Video 85
 
