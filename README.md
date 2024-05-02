@@ -581,7 +581,7 @@ Creamos el Action Create con implementacion para subir archivos
 
 ![1714364601292](image/README/1714364601292.png)
 
-* **Hemos echo una correcion en el commit del video 66 aqui en esta parte, y para no cambiar todas las imagenes, decidi solo poner la correcion**
+* **Hemos echo una correcion en el commit del video 65 aqui en esta parte, y para no cambiar todas las imagenes, decidi solo poner la correcion**
 * 
 * ![1714609491095](image/README/1714609491095.png)
 
@@ -654,6 +654,22 @@ Textarea con Tinymce asociado
 
 
 ### Video 66 Funcionalidad Editar Articulo e Imagen
+
+* Agregamos un campo oculto para mandar el Id al controlador
+* ![1714610150948](image/README/1714610150948.png)
+* Hacemos un Copy-Paste del metodo Create de Articulo, para el Edit y hacemos las correspondientes modificaciones
+* ![1714612749167](image/README/1714612749167.png)
+* ![1714612843792](image/README/1714612843792.png)
+* ![1714612881469](image/README/1714612881469.png)
+
+  Corremos y tomamos como base inicial esto
+
+  ![1714611366233](image/README/1714611366233.png)
+* Solo cambio el campo nombre
+* ![1714612135699](image/README/1714612135699.png)
+* ![1714612153853](image/README/1714612153853.png)
+* Editamos la imagen
+* ![1714612210509](image/README/1714612210509.png)
 
 ### Video 67 Funcionalidad Borrar articulo
 

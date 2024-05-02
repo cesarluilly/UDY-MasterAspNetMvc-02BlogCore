@@ -11,6 +11,15 @@
     //                                                      //    la subida de archivos.
 *@
 <form method="POST" asp-action="Edit" enctype="multipart/form-data">
+
+    @* //                                                   //Se envia el ID del articulo como campo oculto 
+        //                                                  //    y con esto ya se estaria enviando el ID
+        //                                                  //    al controlador
+
+    *@
+    <input type="hidden" asp-for="Articulo.Id" />
+
+
     <div class="row px-2 border">
         @* <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
         <div asp-validation-summary="All" class="text-danger"></div>
