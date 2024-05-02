@@ -685,6 +685,18 @@ Nos basamos en el delete del controlador de Categoria(hacemos un copy-paste)
 
 ### Video 68 Mostrar Imagen en Datatable
 
+IMPORTANTE.- Si en el HTML agrego una columna en la tabla, tambien tengo que agregarlo en el Javascript donde se consume el servicio para renderizarlo, de lo contrario, nos mandara un error
+
+![1714616838211](image/ImportanteARecordar/1714616838211.png)
+
+Agregamos su parte de javascript
+
+![1714619015254](image/README/1714619015254.png)
+
+Corremos la aplicacion
+
+![1714619044266](image/README/1714619044266.png)
+
 ## Seccion 7: Depuracion o Debug
 
 ### Video 69
