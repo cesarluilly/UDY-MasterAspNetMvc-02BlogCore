@@ -104,6 +104,7 @@ namespace BlogCore.Areas.Admin.Controllers
 
         //--------------------------------------------------------------------------------------------------------------
         [HttpDelete]
+        //[ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
 

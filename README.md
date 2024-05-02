@@ -673,6 +673,16 @@ Textarea con Tinymce asociado
 
 ### Video 67 Funcionalidad Borrar articulo
 
+Nos basamos en el delete del controlador de Categoria(hacemos un copy-paste)
+
+![1714616155568](image/README/1714616155568.png)
+
+* Corremos la aplicacion y borramos
+
+![1714615322074](image/README/1714615322074.png)
+
+![1714615910907](image/README/1714615910907.png)
+
 ### Video 68 Mostrar Imagen en Datatable
 
 ## Seccion 7: Depuracion o Debug

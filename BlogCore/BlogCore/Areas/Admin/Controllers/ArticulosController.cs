@@ -197,6 +197,42 @@ namespace BlogCore.Areas.Admin.Controllers
             return Json(new { data = _unitOfWork.ArticuloRepo.GetAll(includeProperties: "Categoria") });
         }
 
+        //--------------------------------------------------------------------------------------------------------------
+        //                                                  //Los metodos de tipo Delete, no pueden tener este
+        //                                                  //    decorador, ya que cuando se consuma el servicio
+        //                                                  //    no lo va a reconocer, es por eso que lo comente.
+        //[ValidateAntiForgeryToken]        
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+
+            Articulo articuloDesdeDB = _unitOfWork.ArticuloRepo.Get(id);
+            String rutaPrincipal = _hostingEnviroment.WebRootPath;
+
+            //                                      //Creamos ruta completa de la imagen sacado de la entity.
+            String rutaImagen = Path.Combine(rutaPrincipal, articuloDesdeDB.UrlImagen.TrimStart('\\'));
+
+            if (
+                //                                  //Existe la imagen
+                System.IO.File.Exists(rutaImagen)
+                )
+            {
+                //                                  //Borramos la imagen para que no se quede en el servidor.
+                System.IO.File.Delete(rutaImagen);
+            }
+
+            if (
+                articuloDesdeDB == null
+                )
+            {
+                return Json(new { success = false, message = "Error borrando articulo" });
+            }
+
+            _unitOfWork.ArticuloRepo.Remove(articuloDesdeDB);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Articulo Borrado Correctamente" });
+        }
+
         ////--------------------------------------------------------------------------------------------------------------
         //[HttpDelete]
         //public IActionResult Delete(int id)

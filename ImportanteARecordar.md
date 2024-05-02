@@ -25,3 +25,7 @@ Nombre de Repositorio va en Singular
 #### Para actualizar una entity, no es necesario consultarlo de la DB para traer el objeto, tambien se puede hacer si front nos envia el objeto ya armado, lo importante es que tenga valor en el Id o llave primaria y los demas campos se supone que son los modificados, y ya despues se pasa al metodo update y lo puedo actualizar
 
 ![1714611904762](image/ImportanteARecordar/1714611904762.png)
+
+#### En los metodos de tipo [Delete], si yo le pongo el [ValidateAntiForgeryToken], al momento de consumirlo, no me lo va a reconocer
+
+<pre class="vditor-reset" placeholder="" contenteditable="true" spellcheck="false"><p data-block="0"><img src="https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Cesar%20Garcia/source/UdemyAspNetMVC/Proyecto2/UDY-MasterAspNetMvc-02BlogCore/image/README/1714616155568.png" alt="1714616155568"/></p></pre>
