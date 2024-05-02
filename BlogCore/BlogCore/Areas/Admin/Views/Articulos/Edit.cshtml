@@ -1,21 +1,21 @@
 ﻿@model BlogCore.Models.ViewModels.ArticuloVM
 
 @{
-    ViewData["Title"] = "Crear Articulo";
+    ViewData["Title"] = "Editar Articulo";
 }
 
 <br />
 <br />
-<h3 class="text-center">Crear un nuevo Articulo</h3>
+<h3 class="text-center">Editar Articulo</h3>
 @* //                                                       //enctype="multipart/form-data --> Nos va a permitir
     //                                                      //    la subida de archivos.
 *@
-<form method="POST" asp-action="Create" enctype="multipart/form-data">
-    <div class="row px-2 offset-1 border">
+<form method="POST" asp-action="Edit" enctype="multipart/form-data">
+    <div class="row px-2 border">
         @* <div asp-validation-summary="ModelOnly" class="text-danger"></div> *@
         <div asp-validation-summary="All" class="text-danger"></div>
 
-        <div class="col-10 offset-1 mt-4">
+        <div class="col-8 mt-4">
             <div class="form-group row">
                 <div class="col-4">
                     <label asp-for="Articulo.Nombre"></label>
@@ -25,19 +25,17 @@
                     <span asp-validation-for="Articulo.Nombre" class="text-danger"></span>
                 </div>
             </div>
-        </div>
 
-        <div class="col-10 offset-1 mt-4">
             <div class="form-group row">
                 <div class="col-4">
-                    <label asp-for="Articulo.Descripcion"></label>
+                    <label asp-for="@Model.Articulo.Descripcion"></label>
                 </div>
                 <div class="col-8">
-                    <textarea asp-for="Articulo.Descripcion" class="form-control" style="height: 300px;"> </textarea>
-                    <span asp-validation-for="Articulo.Descripcion" class="text-danger"></span>
+                    <textarea asp-for="@Model.Articulo.Descripcion" class="form-control" style="height: 300px;" > </textarea>
+                    <span asp-validation-for="@Model.Articulo.Descripcion" class="text-danger"></span>
                 </div>
             </div>
-            
+
 
             <div class="form-group row mt-4">
                 <div class="col-4">
@@ -72,20 +70,29 @@
                     <label asp-for="Articulo.UrlImagen"></label>
                 </div>
                 <div class="col-8">
-                    @* //                                   //El el caso de subir multiples archivos, tendremos 
-                       //                                   //    que agregar el atributo "multiple"
+                    @* //                                   //El el caso de subir multiples archivos, tendremos
+                    //                                   //    que agregar el atributo "multiple"
                     *@
                     <input type="file" name="archivos" id="subidaArchivo" class="form-control">
                     <span asp-validation-for="Articulo.UrlImagen" class="text-danger"></span>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group-row mt-4">
-            <div class="col-8">
-                <partial name="_VistaCrearVolver" />
+            <div class="row mt-4">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary form-control">Editar Articulo</button>
+                </div>
+                &nbsp;
+                <div class="col">
+                    <a asp-action="Index" class="btn btn-success form-control">Volver atras</a>
+                </div>
             </div>
         </div>
+
+        <div class="col-4 pt-3">
+            <img src="@Model.Articulo.UrlImagen" width="300px" style="border-radius:5px; border:1px solid #bbb9b9;" />
+        </div>
+
     </div>
 </form>
 
@@ -97,7 +104,7 @@
     @{
         <partial name="_ValidationScriptsPartial" />
     }
-    
+
     @* //                                                   //Agregamos  la biblioteca de tinymce importada desde cdnjs*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js" integrity="sha512-VCEWnpOl7PIhbYMcb64pqGZYez41C2uws/M/mDdGPy+vtEJHd9BqbShE4/VNnnZdr7YCPOjd+CBmYca/7WWWCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -105,11 +112,11 @@
         tinymce.init({
             //                                              //Elemento sobre el cual se va a implementar
             //                                              //    el tinymce.
-            selector:'textarea',
+            selector: 'textarea',
             //                                              //Par que cargue unos botones por defecto.
-            plugins:'lists',
+            plugins: 'lists',
             //                                              //Agregamos el tipo de formato de menu
-            menubar:'file edit format'
+            menubar: 'file edit format'
         });
     </script>
 

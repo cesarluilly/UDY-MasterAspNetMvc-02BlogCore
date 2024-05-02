@@ -46,6 +46,25 @@ namespace BlogCore.Areas.Admin.Controllers
             return View(artiVM);
         }
 
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            ArticuloVM artiVM = new ArticuloVM()
+            {
+                Articulo = new BlogCore.Models.Articulo(),
+                ListaCategorias = _unitOfWork.CategoriaRepo.GetListaCategorias()
+            };
+
+            if (
+                id != null
+                )
+            {
+                artiVM.Articulo = _unitOfWork.ArticuloRepo.Get(id.GetValueOrDefault());
+            }
+
+            return View(artiVM);
+        }
+
         #region LLamadas a la API
         //--------------------------------------------------------------------------------------------------------------
         [HttpGet]
@@ -81,7 +100,7 @@ namespace BlogCore.Areas.Admin.Controllers
                         archivos[0].CopyTo(fileStreams);
                     }
 
-                    articuloVM.Articulo.UrlImagen = @"imagenes\articulos\" + nombreArchivo + extensionArchivo;
+                    articuloVM.Articulo.UrlImagen = @"\imagenes\articulos\" + nombreArchivo + extensionArchivo;
                     articuloVM.Articulo.FechaCreacion = DateTime.Now.ToString();
 
                     _unitOfWork.ArticuloRepo.Add(articuloVM.Articulo);

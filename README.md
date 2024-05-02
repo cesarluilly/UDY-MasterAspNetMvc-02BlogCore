@@ -581,6 +581,10 @@ Creamos el Action Create con implementacion para subir archivos
 
 ![1714364601292](image/README/1714364601292.png)
 
+* **Hemos echo una correcion en el commit del video 66 aqui en esta parte, y para no cambiar todas las imagenes, decidi solo poner la correcion**
+* 
+* ![1714609491095](image/README/1714609491095.png)
+
 Corremos la app
 
 ![1714364683394](image/README/1714364683394.png)
@@ -596,9 +600,11 @@ Evidencia de guardado de registro
 ### Video 64 Integrar Editor Tinymce
 
 * Cambiamos el input de nuestro input de Descripcion por un textarea
-* ![1714602131515](image/README/1714602131515.png)
+* NOTA.
+* ![1714606424345](image/README/1714606424345.png)
 
 ![1714601833092](image/README/1714601833092.png)
+
 
 * Procedemos a agregar Tinymce
 
@@ -626,8 +632,26 @@ Textarea con Tinymce asociado
 
 ![1714602056141](image/README/1714602056141.png)
 
+* Ahora le damos en "Crear" y lo guarda
+
+  ![1714607035590](image/README/1714607035590.png)
+
 
 ### Video 65 Vista Editar articulo e Imagen
+
+* Creamos el action Edit para Articulos
+
+  ![1714602806366](image/README/1714602806366.png)
+* Creamos la vista de Edit para Articulos(tomamos como base la vista de Create, hacemos un copy-past) y hacemos las modificaciones correspondientes.
+* ![1714606946414](image/README/1714606946414.png)
+* Lo que nos faltaria seria traer la imagen en la URl
+* ![1714609240711](image/README/1714609240711.png)
+* Ejemplo de porque a veses si se muestra la imagen y otras veses no.
+* ![1714608907092](image/README/1714608907092.png)
+* Tambien se modifico el HTML para posicionar los elementos
+* ![1714608994161](image/README/1714608994161.png)
+* ![1714609064646](image/README/1714609064646.png)
+
 
 ### Video 66 Funcionalidad Editar Articulo e Imagen
 

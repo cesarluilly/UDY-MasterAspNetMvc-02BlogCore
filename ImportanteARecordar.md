@@ -17,3 +17,7 @@ Nombre de Repositorio va en Singular
 ![1714342084289](image/ImportanteARecordar/1714342084289.png)
 
 ![1714342796409](image/README/1714342796409.png)
+
+#### Poner bien las etiquetas de HTML, de lo contrario me podria romper lo que intento poner
+
+![1714606424345](image/README/1714606424345.png)
