@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogCore.AccesoDatos.Data.Repository.IRepository
 {
+    //==================================================================================================================
     public interface IUnitOfWork : IDisposable
     {
         //                                                  //IDisposable es generalmente utilizado para liberar
@@ -16,6 +17,7 @@ namespace BlogCore.AccesoDatos.Data.Repository.IRepository
 
         public ICategoriaRepository CategoriaRepo { get; }
         public IArticuloRepository ArticuloRepo { get; }
+        public ISliderRepository SliderRepo { get; }
 
         void Save();
     }

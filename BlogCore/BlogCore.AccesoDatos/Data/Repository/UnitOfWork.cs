@@ -16,6 +16,7 @@ namespace BlogCore.AccesoDatos.Data.Repository
         //--------------------------------------------------------------------------------------------------------------
         public ICategoriaRepository CategoriaRepo { get; private set; }
         public IArticuloRepository ArticuloRepo { get; private set; }
+        public ISliderRepository SliderRepo { get; private set; }
 
         //--------------------------------------------------------------------------------------------------------------
         public UnitOfWork(
@@ -26,6 +27,7 @@ namespace BlogCore.AccesoDatos.Data.Repository
             this._dbContext = dbContext;
             CategoriaRepo = new CategoriaRepository(_dbContext);
             ArticuloRepo = new ArticuloRepository(_dbContext);
+            SliderRepo = new SliderRepository(_dbContext);
         }
 
         //--------------------------------------------------------------------------------------------------------------

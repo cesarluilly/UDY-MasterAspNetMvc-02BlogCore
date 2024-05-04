@@ -605,7 +605,6 @@ Evidencia de guardado de registro
 
 ![1714601833092](image/README/1714601833092.png)
 
-
 * Procedemos a agregar Tinymce
 
 https://www.tiny.cloud/
@@ -636,7 +635,6 @@ Textarea con Tinymce asociado
 
   ![1714607035590](image/README/1714607035590.png)
 
-
 ### Video 65 Vista Editar articulo e Imagen
 
 * Creamos el action Edit para Articulos
@@ -651,7 +649,6 @@ Textarea con Tinymce asociado
 * Tambien se modifico el HTML para posicionar los elementos
 * ![1714608994161](image/README/1714608994161.png)
 * ![1714609064646](image/README/1714609064646.png)
-
 
 ### Video 66 Funcionalidad Editar Articulo e Imagen
 
@@ -699,9 +696,11 @@ Corremos la aplicacion
 
 ## Seccion 7: Depuracion o Debug
 
-### Video 69
+### Video 69 Depuracion
 
-### Video 70
+### Video 70 Tarea - Realizar CRUD para slider
+
+![1714831019046](image/README/1714831019046.png)
 
 ### Video 71
 
