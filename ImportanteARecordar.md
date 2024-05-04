@@ -8,13 +8,16 @@ ctor -> Agregar el constructor
 
 #### Temas Generales
 
-Nombre de Controladores va en Plural
+* Nombre de Controladores va en Plural
 
-Nombre de Tablas o Modelo va en Singular
+* Nombre de Tablas o Modelo va en Singular
+* Nombre de Repositorio va en Singular
+* Nombre controlador de javascript va en Singular
+* Nombre de carpetas de las imagenes, va separado por controlador y en plural
 
-Nombre de Repositorio va en Singular
+  * ![1714834622882](image/ImportanteARecordar/1714834622882.png)
+* 
 
-Nombre controlador de javascript va en Singular
 
 #### **Uso de Include**
 

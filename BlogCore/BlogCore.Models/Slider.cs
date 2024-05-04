@@ -14,13 +14,13 @@ namespace BlogCore.Models
 
         [Required(ErrorMessage = "Ingrese un nombre para el slider")]
         [Display(Name = "Nombre Slider")]
-        public string Nombre { get; set; }
+        public required string Nombre { get; set; }
 
         [Required]
         public bool Estado { get; set; }
 
         [DataType(DataType.ImageUrl)]
         [Display(Name = "Imagen")]
-        public string UrlImagen { get; set; }
+        public string? UrlImagen { get; set; }
     }
 }
