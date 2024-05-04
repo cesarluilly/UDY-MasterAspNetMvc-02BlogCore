@@ -14,6 +14,8 @@ Nombre de Tablas o Modelo va en Singular
 
 Nombre de Repositorio va en Singular
 
+Nombre controlador de javascript va en Singular
+
 #### **Uso de Include**
 
 ![1714342084289](image/ImportanteARecordar/1714342084289.png)
