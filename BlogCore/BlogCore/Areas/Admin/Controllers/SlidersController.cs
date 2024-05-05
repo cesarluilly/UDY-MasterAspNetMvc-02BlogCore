@@ -154,6 +154,28 @@ namespace BlogCore.Areas.Admin.Controllers
             return Json(new { data = _unitOfWork.SliderRepo.GetAll() });
         }
 
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            var sliderDesdeBd = _unitOfWork.SliderRepo.Get(id);
+            string rutaDirectorioPrincipal = _hostingEnvironment.WebRootPath;
+            var rutaImagen = Path.Combine(rutaDirectorioPrincipal, sliderDesdeBd.UrlImagen.TrimStart('\\'));
+            if (System.IO.File.Exists(rutaImagen))
+            {
+                System.IO.File.Delete(rutaImagen);
+            }
+
+
+            if (sliderDesdeBd == null)
+            {
+                return Json(new { success = false, message = "Error borrando slider" });
+            }
+
+            _unitOfWork.SliderRepo.Remove(sliderDesdeBd);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Slider Borrado Correctamente" });
+        }
+
         #endregion
     }
 }
