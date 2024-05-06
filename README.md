@@ -702,34 +702,42 @@ Corremos la aplicacion
 
 ![1714831019046](image/README/1714831019046.png)
 
-### Video 71
+## Seccion 9: BlogCore: Pagina de Inicio - Cliente
 
-### Video 72
+### Video 73 Controlador y Vista Pagina de Inicio
 
-### Video 73
+* Modificamos el Home(index) del controlador Cliente
+  * ![1714964273848](image/README/1714964273848.png)![1714964309250](image/README/1714964309250.png)
 
-### Video 74
+Resultado
 
-### Video 75
+* ![1714964334607](image/README/1714964334607.png)
 
-### Video 76
 
-### Video 77
+### Video 74 Pagina de Inicio Slider
 
-### Video 78
+### Video 75 Slider Activo
 
-### Video 79
+### Video 76 Pagina Detalle
 
-### Video 80
+## Seccion 10: BlogCore: Identity(Autenticacion)
 
-### Video 81
+### Video 77 Introduccion
 
-### Video 82
+### Video 78 Scaffold Identity
 
-### Video 83
+### Video 79 Agregar Campos al Identity
 
-### Video 84
+### Video 80 Registro de Usuarios
 
-### Video 85
+### Video 81 Ajustes en Layout Acceso
+
+### Video 82 Acceso Login de Usuarios
+
+### Video 83 Implementacion de Roles
+
+### Video 84 Crud Usuarios, Bloquear y Desbloquear Usuarios
+
+### Video 85 Esconder Usuario Autenticado
 
 ### Video 86
