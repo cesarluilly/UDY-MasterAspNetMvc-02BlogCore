@@ -1,3 +1,6 @@
+
+
+
 #### Borramos cache con Ctrl + F5
 
 #### Snippets C#
@@ -9,15 +12,13 @@ ctor -> Agregar el constructor
 #### Temas Generales
 
 * Nombre de Controladores va en Plural
-
 * Nombre de Tablas o Modelo va en Singular
 * Nombre de Repositorio va en Singular
 * Nombre controlador de javascript va en Singular
 * Nombre de carpetas de las imagenes, va separado por controlador y en plural
 
   * ![1714834622882](image/ImportanteARecordar/1714834622882.png)
-* 
-
+* Nombre de vistas parciales "_NombreVistaParcial" en singular empezando con Mayuscula
 
 #### **Uso de Include**
 
@@ -40,3 +41,9 @@ ctor -> Agregar el constructor
 #### Si en el HTML agrego una columna en la tabla, tambien tengo que agregarlo en el Javascript donde se consume el servicio para renderizarlo, de lo contrario, nos mandara un error
 
 ![1714616838211](image/ImportanteARecordar/1714616838211.png)
+
+#### ViewBag. Normalmente se utiliza para comportamientos del HTML, asi como para si estoy o no en una pagina de inicio, o para mandar variables y que interacturen con otras vistas
+
+![1714966440143](image/ImportanteARecordar/1714966440143.png)
+
+![1714966403853](image/ImportanteARecordar/1714966403853.png)

@@ -28,7 +28,8 @@ namespace BlogCore.Areas.Cliente.Controllers
                 ListArticulos = _unitOfWork.ArticuloRepo.GetAll()
             };
 
-            //Esta línea es para poder saber si estamos en el home o no
+            //                                              //Esta línea es para poder saber si estamos
+            //                                              //    en el home o no
             ViewBag.IsHome = true;
 
             return View(homeVM);

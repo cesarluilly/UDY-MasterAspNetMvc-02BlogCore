@@ -713,8 +713,14 @@ Resultado
 
 * ![1714964334607](image/README/1714964334607.png)
 
-
 ### Video 74 Pagina de Inicio Slider
+
+* El Slider se va a realiar en el Layout ya que queremos que se vea a pantalla completa
+* Vamos al metodo index
+* ![1715437766536](image/README/1715437766536.png)
+* ![1715437841841](image/README/1715437841841.png)
+* ViewBag ahi se almacenan informacion o variables para el control de la pagina
+* ![1715437917498](image/README/1715437917498.png)
 
 ### Video 75 Slider Activo
 
