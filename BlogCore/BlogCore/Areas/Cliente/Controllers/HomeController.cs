@@ -35,6 +35,14 @@ namespace BlogCore.Areas.Cliente.Controllers
             return View(homeVM);
         }
 
+        [HttpGet]
+        //==================================================================================================================
+        public IActionResult Detalle(int id)
+        {
+            var articuloDesdeBd = _unitOfWork.ArticuloRepo.Get(id);
+            return View(articuloDesdeBd);
+        }
+
         //--------------------------------------------------------------------------------------------------------------
         public IActionResult Privacy()
         {

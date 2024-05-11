@@ -1,6 +1,3 @@
-
-
-
 #### Borramos cache con Ctrl + F5
 
 #### Snippets C#
@@ -47,3 +44,15 @@ ctor -> Agregar el constructor
 ![1714966440143](image/ImportanteARecordar/1714966440143.png)
 
 ![1714966403853](image/ImportanteARecordar/1714966403853.png)
+
+#### Html.Raw
+
+Es para asegurar que se renderize el codigo HTML o para que se ejecute correctamente el Script.
+
+El método `@Html.Raw()` en ASP.NET MVC es útil cuando necesitas renderizar HTML o scripts en tu vista de forma que no sean codificados HTML por defecto. Por default, Razor codifica los contenidos para evitar problemas de seguridad como inyecciones XSS (Cross-Site Scripting). Sin embargo, hay situaciones donde puedes necesitar insertar HTML o scripts que ya están formateados y quieres que se rendericen tal cual en el navegador.
+
+![1715438977933](image/README/1715438977933.png)
+
+![1715439375571](image/README/1715439375571.png)
+
+![1715439317277](image/ImportanteARecordar/1715439317277.png)

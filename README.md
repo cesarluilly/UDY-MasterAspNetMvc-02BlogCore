@@ -726,6 +726,14 @@ Resultado
 
 ### Video 76 Pagina Detalle
 
+Agregamos el Action Detalle
+
+![1715438977933](image/README/1715438977933.png)
+
+![1715439375571](image/README/1715439375571.png)
+
+![1715439317277](image/ImportanteARecordar/1715439317277.png)
+
 ## Seccion 10: BlogCore: Identity(Autenticacion)
 
 ### Video 77 Introduccion
