@@ -805,7 +805,7 @@ Entonces en Razor tenemos el archivo C# asociado a la vista directamente, .
   * ![1715485978853](image/README/1715485978853.png)
 * Asignamos los valores para que se puedan guardar
   * ![1715486060202](image/README/1715486060202.png)
-* Abrimos el archivo C# asociado a Login.cshtml y reemplazamos `IdentityUser` por `ApplicationUser` en todos los lugares de la solucion a excepcion del `_ManageNav`(ahi no se cambia)
+* Abrimos el archivo C# asociado a Login.cshtml y reemplazamos `IdentityUser` por `ApplicationUser` en todos los lugares de la solucion
   * ![1715481135301](image/README/1715481135301.png)
 * Asignamos valores de los campos personalizados para que se puedan guardar en la Base de Datos
   * ![1715484932770](image/README/1715484932770.png)
@@ -823,6 +823,13 @@ y se aplico color blando para el usuario
 ![1715490454766](image/README/1715490454766.png)
 
 ### Video 82 Acceso Login de Usuarios
+
+* Personalizamos los msj de validaciones
+  * ![1715491936517](image/README/1715491936517.png)
+* Personalizamos el cshtml del Login
+  * ![1715492039137](image/README/1715492039137.png)
+* Personalizamos 2 archivos mas
+  * ![1715492130263](image/README/1715492130263.png)
 
 ### Video 83 Implementacion de Roles
 
