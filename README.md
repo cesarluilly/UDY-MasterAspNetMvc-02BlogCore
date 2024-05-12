@@ -948,19 +948,19 @@ Solo agregamos informacion a Categorias y Articulos a traves de la aplicacion
 
 ![1715549509207](image/README/1715549509207.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
 ### Video 92 Buscador de Articulos Parte 2
+
+![1715554405294](image/README/1715554405294.png)
+
+Agregamos codigo HTML a la Vista "ResultadoBusqueda"
+
+![1715554553923](image/README/1715554553923.png)
+
+![1715554666885](image/README/1715554666885.png)
+
+
+
+
 
 ### Video 93 Paginacion de Articulos en Inicio
 

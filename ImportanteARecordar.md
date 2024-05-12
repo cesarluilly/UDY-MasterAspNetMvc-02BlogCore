@@ -53,6 +53,7 @@ ctor -> Agregar el constructor
 * `<a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">No tienes cuenta? Registrate Aquí</a>`
 * `<input class="form-control me-sm-2 d-flex text-dark" asp-controller="Home" asp-action="resultadoBusqueda" method="get" placeholder="Ingresa lo que quieres buscar">`
 * `<a class="dropdown-item" asp-area="Admin" asp-controller="Categorias" asp-action="Index">Categorias</a>`
+* `<a class="page-link" asp-controller="Home" asp-action="Index" asp-route-page="@(Model.PageIndex - 1)">Anterior</a>`
 
 
 #### **Uso de Include**
@@ -155,3 +156,21 @@ Si se pone a nivel de Action, sobreescribe lo que tenga a nivel de Controlador
 ![1715542994227](image/README/1715542994227.png)
 
 ![1715541418167](image/ImportanteARecordar/1715541418167.png)
+
+### Recibir valores en parametros del Action desde un Input
+
+![1715551465136](image/ImportanteARecordar/1715551465136.png)
+
+![1715551521917](image/ImportanteARecordar/1715551521917.png)
+
+### Recibir valores en parametros del Action desde cualquier elemento(Boton, enlace, etc)
+
+![1715554112516](image/ImportanteARecordar/1715554112516.png)
+
+![1715554141671](image/ImportanteARecordar/1715554141671.png)
+
+![1715554202565](image/ImportanteARecordar/1715554202565.png)
+
+### Clase interesante para Paginacion
+
+![1715554822421](image/ImportanteARecordar/1715554822421.png)

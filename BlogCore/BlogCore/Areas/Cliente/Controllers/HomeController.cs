@@ -37,7 +37,7 @@ namespace BlogCore.Areas.Cliente.Controllers
 
         //--------------------------------------------------------------------------------------------------------------
         [HttpGet]
-        public IActionResult ResultadoBusqueda(string searchString, int page=1, int pageSize = 6)
+        public IActionResult ResultadoBusqueda(string searchString, int page = 1, int pageSize = 2)
         {
             var articulos = _unitOfWork.ArticuloRepo.AsQueryable();
 
