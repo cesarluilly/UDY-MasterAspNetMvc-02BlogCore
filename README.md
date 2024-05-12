@@ -915,8 +915,14 @@ Si accedo a un usuario bloqueado saldra lo siguiente
 ![1715542880446](image/README/1715542880446.png)
 
 
-
 ### Video 88 Protegiendo Roles en el Registro
+
+* Solo el Administrador puede Registra a otros con un Rol en especifico, de lo contrario todos los demas se registran como "Cliente"
+
+  * ![1715543612149](image/README/1715543612149.png)
+* Corriendo la aplicacion, no estoy logueado como admin, por lo tanto no me aparece la seleccion del Rol
+
+  * ![1715543451958](image/README/1715543451958.png)
 
 ### Video 89 Descarga los archivos fuente de esta seccion
 

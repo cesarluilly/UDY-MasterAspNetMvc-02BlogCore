@@ -60,16 +60,20 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
 
-            @* Selector de Roles *@
-            <div class="form-group row">
-                <div class="col-6"><h4>Seleccionar Rol de Usuario</h4></div>
-                <div class="col-5">
-                    <input type="radio" name="radUsuarioRole" value="@CntConstant.Administrador" /> @CntConstant.Administrador 
-                    <input type="radio" name="radUsuarioRole" value="@CntConstant.Registrado" /> @CntConstant.Registrado 
+            @* Autorizacion *@
+            @if (
+               User.IsInRole(CntConstant.Administrador)
+               )
+            {
+                @* Selector de Roles *@
+                <div class="form-group row">
+                    <div class="col-6"><h4>Seleccionar Rol de Usuario</h4></div>
+                    <div class="col-5">
+                        <input type="radio" name="radUsuarioRole" value="@CntConstant.Administrador" /> @CntConstant.Administrador
+                        <input type="radio" name="radUsuarioRole" value="@CntConstant.Registrado" /> @CntConstant.Registrado
+                    </div>
                 </div>
-            </div>
-
-
+            }
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Registro</button>
         </form>
     </div>
