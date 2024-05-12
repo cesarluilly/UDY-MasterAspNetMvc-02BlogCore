@@ -134,3 +134,9 @@ Los repos instanciarlos dentro del constructor del UnitOfWork, y asi nos evitamo
 ### Claims
 
 ![1715536676291](image/ImportanteARecordar/1715536676291.png)
+
+### Autorizacion a parte de HTML
+
+![1715540574442](image/ImportanteARecordar/1715540574442.png)
+
+### Proteger controladores

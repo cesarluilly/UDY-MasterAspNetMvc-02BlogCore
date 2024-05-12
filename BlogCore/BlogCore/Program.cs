@@ -41,6 +41,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//                                                          //Para trabajar con la autorizacion, hay que asegurar
+//                                                          //    esta siguiente linea de que este.
 app.UseAuthorization();
 
 app.MapControllerRoute(

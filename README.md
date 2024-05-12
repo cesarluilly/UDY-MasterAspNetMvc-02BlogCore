@@ -892,4 +892,53 @@ Si accedo a un usuario bloqueado saldra lo siguiente
 * Corremos la app
   * ![1715536932014](image/README/1715536932014.png)
 
-### Video 86
+## Seccion 11: BlogCore: Identity (Autorización)
+
+### Video 86 Protegiendo la Barra de Navegacion - Navbar
+
+* Aseguramos la autenticacion
+
+  * ![1715539981700](image/README/1715539981700.png)
+* Solo los usuarios con rol de Administrado pueden ver el Navbar
+
+  * ![1715540273320](image/README/1715540273320.png)
+  * 
+* Corremos la aplicacion
+
+  * ![1715540504809](image/README/1715540504809.png)
+
+### Video 87 Protegiendo Acceso a Controladores
+
+### Video 88 Protegiendo Roles en el Registro
+
+### Video 89 Descarga los archivos fuente de esta seccion
+
+## Seccion 12: BlogCore: Ajustes Finales y Contenido
+
+### Video 90 Agregar Contenido Demo
+
+### Video 91 Buscador de Articulos Parte 1
+
+### Video 92 Buscador de Articulos Parte 2
+
+### Video 93 Paginacion de Articulos en Inicio
+
+### Video 94 Personalizar Sitio Web
+
+### Video 95 Descarga los archivos fuente de esta seccion
+
+## Seccion 13: BlogCore: Siembra de Datos (Seeding)
+
+### Video 96 Interfaz y Clase Inicializadora
+
+### Video 97 Implementacion de Siembra de Datos en Program.cs
+
+### Video 98 Probar la Siembra de Datos
+
+### Video 99 Descarga los archivos de esta seccion
+
+## Seccion 14: BlogCore: Publicacion (Deploy)
+
+### Video 100 Migrar Base de Datos a Azure
+
+### Video 101 Publicar Aplicacion Blazor Server en Azure App Service
