@@ -787,8 +787,13 @@ Entonces en Razor tenemos el archivo C# asociado a la vista directamente, .
 * Razor
   * ![1715476832213](image/README/1715476832213.png)
 
-
 ### Video 79 Agregar Campos al Identity
+
+* Agregamos un nuevo modelo![1715478652407](image/README/1715478652407.png)
+* Agregamos al Context ![1715478734689](image/README/1715478734689.png)
+* Generamos la Migracion y el Update de la DB
+  * Y los campos del modelo se veran reflejados en la tabla `AspNewUsers`
+    * ![1715478852629](image/README/1715478852629.png)
 
 ### Video 80 Registro de Usuarios
 
