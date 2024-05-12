@@ -64,10 +64,14 @@ El método `@Html.Raw()` en ASP.NET MVC es útil cuando necesitas renderizar HTM
 * Razor es un archivo cshtml con su archivo ligado directamente
   * ![1715476832213](image/README/1715476832213.png)
 
-### Autocomplete 
+### Autocomplete
 
 ```html
 <input type="text" id="direccion" name="direccion" autocomplete="direccion" />`
 ```
 
 * ![1715479517272](image/ImportanteARecordar/1715479517272.png)
+
+### Request.Form["radUsuarioRole"]
+
+* ![1715495343423](image/ImportanteARecordar/1715495343423.png)

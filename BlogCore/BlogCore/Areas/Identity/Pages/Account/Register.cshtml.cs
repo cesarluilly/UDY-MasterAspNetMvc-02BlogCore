@@ -11,6 +11,7 @@ using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
 using BlogCore.Models;
+using BlogCore.Utilidades;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -40,6 +41,7 @@ namespace BlogCore.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public RegisterModel(
             //UserManager<IdentityUser> userManager,
@@ -49,7 +51,9 @@ namespace BlogCore.Areas.Identity.Pages.Account
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager
+            )
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -57,6 +61,7 @@ namespace BlogCore.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
         }
 
         /// <summary>
@@ -158,23 +163,65 @@ namespace BlogCore.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    //                                      //Esto pasa en la primera ves que se ejecute.
+                    //                                      //Validamos si los roles existen, si no se crean.
+                    if (
+                        !await _roleManager.RoleExistsAsync(CntConstant.Administrador)
+                        )
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(CntConstant.Administrador));
+                        await _roleManager.CreateAsync(new IdentityRole(CntConstant.Registrado));
+                        await _roleManager.CreateAsync(new IdentityRole(CntConstant.Cliente));
+                    }
+
+                    //                                      //Obtenemos el rol seleccionado.
+                    string rol = Request.Form["radUsuarioRole"].ToString();
+
+                    //                                      //Validamos si el rol seleccionado es admin y si lo es
+                    //                                      //    lo agregamos.
+                    if (
+                        rol == CntConstant.Administrador
+                        )
+                    {
+                        await _userManager.AddToRoleAsync(user, CntConstant.Administrador);
+                    }
+                    else
+                    {
+                        if (
+                            rol == CntConstant.Registrado
+                            )
+                        {
+                            await _userManager.AddToRoleAsync(user, CntConstant.Registrado);
+                        }
+                        else
+                        {
+                            await _userManager.AddToRoleAsync(user, CntConstant.Cliente);
+                        }
+                    }
+
                     _logger.LogInformation("User created a new account with password.");
 
+                    //                                      //Esta parte trata de obtener el usuario una ves que se 
+                    //                                      //    registra, pero para los propositos de este ejemplo,
+                    //                                      //    no es necesario esta parte.
                     var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
+                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    //var callbackUrl = Url.Page(
+                    //    "/Account/ConfirmEmail",
+                    //    pageHandler: null,
+                    //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                    //    protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        //                                  //Se comento y se agrego lo demas.
+                        //return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        await _signInManager.SignInAsync(user, isPersistent: false);
+                        return LocalRedirect(returnUrl);
                     }
                     else
                     {

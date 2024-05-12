@@ -13,8 +13,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+//                                                          //Esto es para que añada toda la interfaz grafica y algunas
+//                                                          //    paginas de Razor del Identity necesaria para 
+//                                                          //    trabajar con Roles.
+    .AddDefaultUI();
+
+
 builder.Services.AddControllersWithViews();
 
 //Agregar contenedor de trabajo al contender IoC de inyeccion de dependencia.

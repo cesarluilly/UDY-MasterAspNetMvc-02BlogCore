@@ -830,8 +830,31 @@ y se aplico color blando para el usuario
   * ![1715492039137](image/README/1715492039137.png)
 * Personalizamos 2 archivos mas
   * ![1715492130263](image/README/1715492130263.png)
+* ![1715527774338](image/README/1715527774338.png)
 
 ### Video 83 Implementacion de Roles
+
+* Agregamos las constantes de Roles
+  * ![1715527886329](image/README/1715527886329.png)
+* Agregamos selector de Roles en el HTML de Register
+  * ![1715527991937](image/README/1715527991937.png)
+* Nos Preparamos para recibir el RoleManager
+  * ![1715528138131](image/README/1715528138131.png)
+* Al momento de agregar el usuario, hay que validar que los roles exista, en caso contrario los agregamos
+  * ![1715528919725](image/README/1715528919725.png)
+* Se comenta porque no trabajamos con esa parte y genera errores.
+  * ![1715529050163](image/README/1715529050163.png)
+* Agregamos `AddDefaultUI` para añadir la interfaz grafica y algunas paginas de Razor del Identity
+  * ![1715529181816](image/README/1715529181816.png)
+
+Corremos la Aplicacion
+
+![1715527725718](image/README/1715527725718.png)
+
+Consultamos los Registros en la DB
+
+![1715529470390](image/README/1715529470390.png)
+
 
 ### Video 84 Crud Usuarios, Bloquear y Desbloquear Usuarios
 

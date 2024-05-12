@@ -1,0 +1,115 @@
+[1mdiff --git a/BlogCore/BlogCore/Areas/Identity/Pages/Account/Register.cshtml.cs b/BlogCore/BlogCore/Areas/Identity/Pages/Account/Register.cshtml.cs[m
+[1mindex aabde73..665d061 100644[m
+[1m--- a/BlogCore/BlogCore/Areas/Identity/Pages/Account/Register.cshtml.cs[m
+[1m+++ b/BlogCore/BlogCore/Areas/Identity/Pages/Account/Register.cshtml.cs[m
+[36m@@ -11,6 +11,7 @@[m [musing System.Text.Encodings.Web;[m
+ using System.Threading;[m
+ using System.Threading.Tasks;[m
+ using BlogCore.Models;[m
+[32m+[m[32musing BlogCore.Utilidades;[m
+ using Microsoft.AspNetCore.Authentication;[m
+ using Microsoft.AspNetCore.Authorization;[m
+ using Microsoft.AspNetCore.Identity;[m
+[36m@@ -40,6 +41,7 @@[m [mnamespace BlogCore.Areas.Identity.Pages.Account[m
+         private readonly IUserEmailStore<ApplicationUser> _emailStore;[m
+         private readonly ILogger<RegisterModel> _logger;[m
+         private readonly IEmailSender _emailSender;[m
+[32m+[m[32m        private readonly RoleManager<IdentityRole> _roleManager;[m
+ [m
+         public RegisterModel([m
+             //UserManager<IdentityUser> userManager,[m
+[36m@@ -49,7 +51,9 @@[m [mnamespace BlogCore.Areas.Identity.Pages.Account[m
+             IUserStore<ApplicationUser> userStore,[m
+             SignInManager<ApplicationUser> signInManager,[m
+             ILogger<RegisterModel> logger,[m
+[31m-            IEmailSender emailSender)[m
+[32m+[m[32m            IEmailSender emailSender,[m
+[32m+[m[32m            RoleManager<IdentityRole> roleManager[m
+[32m+[m[32m            )[m
+         {[m
+             _userManager = userManager;[m
+             _userStore = userStore;[m
+[36m@@ -57,6 +61,7 @@[m [mnamespace BlogCore.Areas.Identity.Pages.Account[m
+             _signInManager = signInManager;[m
+             _logger = logger;[m
+             _emailSender = emailSender;[m
+[32m+[m[32m            _roleManager = roleManager;[m
+         }[m
+ [m
+         /// <summary>[m
+[36m@@ -158,23 +163,65 @@[m [mnamespace BlogCore.Areas.Identity.Pages.Account[m
+ [m
+                 if (result.Succeeded)[m
+                 {[m
+[32m+[m[32m                    //                                      //Esto pasa en la primera ves que se ejecute.[m
+[32m+[m[32m                    //                                      //Validamos si los roles existen, si no se crean.[m
+[32m+[m[32m                    if ([m
+[32m+[m[32m                        !await _roleManager.RoleExistsAsync(CntConstant.Administrador)[m
+[32m+[m[32m                        )[m
+[32m+[m[32m                    {[m
+[32m+[m[32m                        await _roleManager.CreateAsync(new IdentityRole(CntConstant.Administrador));[m
+[32m+[m[32m                        await _roleManager.CreateAsync(new IdentityRole(CntConstant.Registrado));[m
+[32m+[m[32m                        await _roleManager.CreateAsync(new IdentityRole(CntConstant.Cliente));[m
+[32m+[m[32m                    }[m
+[32m+[m
+[32m+[m[32m                    //                                      //Obtenemos el rol seleccionado.[m
+[32m+[m[32m                    string rol = Request.Form["radUsuarioRole"].ToString();[m
+[32m+[m
+[32m+[m[32m                    //                                      //Validamos si el rol seleccionado es admin y si lo es[m
+[32m+[m[32m                    //                                      //    lo agregamos.[m
+[32m+[m[32m                    if ([m
+[32m+[m[32m                        rol == CntConstant.Administrador[m
+[32m+[m[32m                        )[m
+[32m+[m[32m                    {[m
+[32m+[m[32m                        await _userManager.AddToRoleAsync(user, CntConstant.Administrador);[m
+[32m+[m[32m                    }[m
+[32m+[m[32m                    else[m
+[32m+[m[32m                    {[m
+[32m+[m[32m                        if ([m
+[32m+[m[32m                            rol == CntConstant.Registrado[m
+[32m+[m[32m                            )[m
+[32m+[m[32m                        {[m
+[32m+[m[32m                            await _userManager.AddToRoleAsync(user, CntConstant.Registrado);[m
+[32m+[m[32m                        }[m
+[32m+[m[32m                        else[m
+[32m+[m[32m                        {[m
+[32m+[m[32m                            await _userManager.AddToRoleAsync(user, CntConstant.Cliente);[m
+[32m+[m[32m                        }[m
+[32m+[m[32m                    }[m
+[32m+[m
+                     _logger.LogInformation("User created a new account with password.");[m
+ [m
+[32m+[m[32m                    //                                      //Esta parte trata de obtener el usuario una ves que se[m[41m [m
+[32m+[m[32m                    //                                      //    registra, pero para los propositos de este ejemplo,[m
+[32m+[m[32m                    //                                      //    no es necesario esta parte.[m
+                     var userId = await _userManager.GetUserIdAsync(user);[m
+[31m-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);[m
+[31m-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));[m
+[31m-                    var callbackUrl = Url.Page([m
+[31m-                        "/Account/ConfirmEmail",[m
+[31m-                        pageHandler: null,[m
+[31m-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },[m
+[31m-                        protocol: Request.Scheme);[m
+[32m+[m[32m                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);[m
+[32m+[m[32m                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));[m
+[32m+[m[32m                    //var callbackUrl = Url.Page([m
+[32m+[m[32m                    //    "/Account/ConfirmEmail",[m
+[32m+[m[32m                    //    pageHandler: null,[m
+[32m+[m[32m                    //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },[m
+[32m+[m[32m                    //    protocol: Request.Scheme);[m
+ [m
+[31m-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",[m
+[31m-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");[m
+[32m+[m[32m                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",[m
+[32m+[m[32m                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");[m
+ [m
+                     if (_userManager.Options.SignIn.RequireConfirmedAccount)[m
+                     {[m
+[31m-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });[m
+[32m+[m[32m                        //                                  //Se comento y se agrego lo demas.[m
+[32m+[m[32m                        //return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });[m
+[32m+[m[32m                        await _signInManager.SignInAsync(user, isPersistent: false);[m
+[32m+[m[32m                        return LocalRedirect(returnUrl);[m
+                     }[m
+                     else[m
+                     {[m
