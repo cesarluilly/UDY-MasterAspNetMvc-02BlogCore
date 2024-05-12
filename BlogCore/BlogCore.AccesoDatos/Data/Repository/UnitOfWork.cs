@@ -17,6 +17,7 @@ namespace BlogCore.AccesoDatos.Data.Repository
         public ICategoriaRepository CategoriaRepo { get; private set; }
         public IArticuloRepository ArticuloRepo { get; private set; }
         public ISliderRepository SliderRepo { get; private set; }
+        public IUsuarioRepository UsuarioRepo { get; private set; }
 
         //--------------------------------------------------------------------------------------------------------------
         public UnitOfWork(
@@ -25,9 +26,17 @@ namespace BlogCore.AccesoDatos.Data.Repository
             )
         {
             this._dbContext = dbContext;
+
+            //                                              //La ventaja de Instanciar aqui los repositorios, 
+            //                                              //    es que no tenemos que hacer la instaciacion
+            //                                              //    en el program a traves de inyeccion de dependencias, 
+            //                                              //    es mas rapido instanciarlo aqui que inyectarlo.
+            //                                              //De esta forma en el Program solo inyectamos el
+            //                                              //    IUnitOfWork y evitamos agregar cada uno de los repos.
             CategoriaRepo = new CategoriaRepository(_dbContext);
             ArticuloRepo = new ArticuloRepository(_dbContext);
             SliderRepo = new SliderRepository(_dbContext);
+            UsuarioRepo = new UsuarioRepository(_dbContext);
         }
 
         //--------------------------------------------------------------------------------------------------------------

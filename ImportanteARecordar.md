@@ -17,6 +17,45 @@ ctor -> Agregar el constructor
   * ![1714834622882](image/ImportanteARecordar/1714834622882.png)
 * Nombre de vistas parciales "_NombreVistaParcial" en singular empezando con Mayuscula
 
+### TagHelpers(Conocido en todo el curso)
+
+* `@Html.DropDownListFor(m => m.Articulo.CategoriaId, Model.ListaCategorias, "-Por favor seleccion una categoria-", new { @class = "form-control" })`
+* ``<th>@Html.DisplayNameFor(m => m.Id)</th>``
+* `<td>@Html.DisplayFor(m => item.Id)</td> `
+* `<p class="text-secondary">@Html.Raw(Model.Descripcion)</p>`
+* `@Url.Content(slider.UrlImagen)`
+* `<h1>@Html.Raw(slider.Nombre)</h1>`
+* `@model BlogCore.Models.ViewModels.ArticuloVM`
+* `@{ ViewData["Title"] = "Crear Articulo"; }`
+* `@* Coments *@`
+* `@section Scripts { }`
+* `@using BlogCore`
+* `@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers`
+* `<h1>@ViewData["Title"]</h1>`
+* `@page`
+* `@RenderBody()`
+* `@media (min-width: 768px) { html { font-size: 16px; } }`
+
+### Asp- (Conocidos en todo el curso)
+
+* `<form method="POST" asp-action="Create" enctype="multipart/form-data">`
+* `<div asp-validation-summary="All" class="text-danger"></div>`
+* `<label asp-for="Articulo.Nombre"></label>`
+* `<input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />`
+* `<span asp-validation-for="Articulo.Nombre" class="text-danger"></span>`
+* `<a asp-page="./Disable2fa" class="btn btn-primary">Disable 2FA</a>`
+* `<a asp-area="Identity" asp-page="/Account/Register" class="btn btn-info"> <i class="fas fa-plus"></i> &nbsp; Registra un nuevo usuario </a>s`
+  * Para acceder a paginas Razor sin MVC
+* `<a class="dropdown-item" asp-area="Admin" asp-controller="Categorias" asp-action="Index">Categorias</a>`
+  * Para acceder a paginas de MVC
+* `<a asp-action="Bloquear" asp-route-id="@item.Id"> <i class="fas fa-lock-open"></i> </a>`
+* `<form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post">`
+* `<a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">No tienes cuenta? Registrate Aquí</a>`
+* 
+
+<a class="dropdown-item" asp-area="Admin" asp-controller="Categorias" asp-action="Index">Categorias</a>
+
+
 #### **Uso de Include**
 
 ![1714342084289](image/ImportanteARecordar/1714342084289.png)
@@ -75,3 +114,19 @@ El método `@Html.Raw()` en ASP.NET MVC es útil cuando necesitas renderizar HTM
 ### Request.Form["radUsuarioRole"]
 
 * ![1715495343423](image/ImportanteARecordar/1715495343423.png)
+
+### Solo inyectar el IUnitOfWork en el IoT(contenedor de depencias)
+
+Los repos instanciarlos dentro del constructor del UnitOfWork, y asi nos evitamos inyectarlos en el IoT, ya que ese proceso es mas tedioso
+
+![1715530929953](image/ImportanteARecordar/1715530929953.png)
+
+![1715531778423](image/ImportanteARecordar/1715531778423.png)
+
+### Liga para ir a una pagina de MVC (asp-area, asp-controller y asp-action)
+
+![1715531901300](image/ImportanteARecordar/1715531901300.png)
+
+### Liga para ir a una pagina Razor que no tiene MVC (asp-area y asp-page)
+
+![1715531669030](image/ImportanteARecordar/1715531669030.png)

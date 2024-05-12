@@ -18,6 +18,7 @@ namespace BlogCore.AccesoDatos.Data.Repository.IRepository
         public ICategoriaRepository CategoriaRepo { get; }
         public IArticuloRepository ArticuloRepo { get; }
         public ISliderRepository SliderRepo { get; }
+        public IUsuarioRepository UsuarioRepo { get; }
 
         void Save();
     }

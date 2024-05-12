@@ -858,6 +858,36 @@ Consultamos los Registros en la DB
 
 ### Video 84 Crud Usuarios, Bloquear y Desbloquear Usuarios
 
+* Creamos la Interfaz del repositorio para Usuario
+
+  * ![1715535534189](image/README/1715535534189.png)
+* Creamos la clase del repositorio para Usuario
+
+  * ![1715535583815](image/README/1715535583815.png)
+* Agregamos el repositorio al UnitOfWork e instanciamos el repo en el contructor
+
+  * ![1715535636941](image/README/1715535636941.png)
+  * ![1715535676828](image/README/1715535676828.png)
+* Creamos la Vista
+
+  * ![1715535728345](image/README/1715535728345.png)
+  * ![1715535757628](image/README/1715535757628.png)
+* Agregamos los Action de Bloquear y Desbloquear en el Controlador
+* ![1715535826799](image/README/1715535826799.png)
+
+Corriendo la Aplicacion
+
+![1715535439897](image/README/1715535439897.png)
+
+![1715535257503](image/README/1715535257503.png)
+
+Si accedo a un usuario bloqueado saldra lo siguiente
+
+![1715535293260](image/README/1715535293260.png)
+
+
+
+
 ### Video 85 Esconder Usuario Autenticado
 
 ### Video 86
