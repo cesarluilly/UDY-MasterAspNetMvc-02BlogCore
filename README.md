@@ -816,6 +816,12 @@ Entonces en Razor tenemos el archivo C# asociado a la vista directamente, .
 
 ### Video 81 Ajustes en Layout Acceso
 
+Navbar se le aplico container-fluid
+
+y se aplico color blando para el usuario
+
+![1715490454766](image/README/1715490454766.png)
+
 ### Video 82 Acceso Login de Usuarios
 
 ### Video 83 Implementacion de Roles
