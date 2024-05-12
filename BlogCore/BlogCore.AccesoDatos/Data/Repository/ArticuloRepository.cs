@@ -30,5 +30,11 @@ namespace BlogCore.AccesoDatos.Data.Repository
 
             //this._dbContext.SaveChanges();
         }
+
+        //--------------------------------------------------------------------------------------------------------------
+        public IQueryable<Articulo> AsQueryable()
+        {
+            return _dbContext.Set<Articulo>().AsQueryable();
+        }
     }
 }

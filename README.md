@@ -930,7 +930,35 @@ Si accedo a un usuario bloqueado saldra lo siguiente
 
 ### Video 90 Agregar Contenido Demo
 
+Solo agregamos informacion a Categorias y Articulos a traves de la aplicacion
+
 ### Video 91 Buscador de Articulos Parte 1
+
+![1715549174524](image/README/1715549174524.png)
+
+![1715549243485](image/README/1715549243485.png)
+
+![1715549003221](image/README/1715549003221.png)
+
+![1715549047641](image/README/1715549047641.png)
+
+![1715549347780](image/README/1715549347780.png)
+
+![1715549447292](image/README/1715549447292.png)
+
+![1715549509207](image/README/1715549509207.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Video 92 Buscador de Articulos Parte 2
 

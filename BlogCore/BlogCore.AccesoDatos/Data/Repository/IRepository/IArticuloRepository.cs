@@ -17,5 +17,9 @@ namespace BlogCore.AccesoDatos.Data.Repository.IRepository
         //                                                  //    entidades se actualizen a traves del contexto y 
         //                                                  //    se guarden mediante el metodo saveChanges().
         void Update(Articulo articulo);
+
+        //                                                  //Metodo para el buscador.
+        //                                                  //Esto es un metodo comun.
+        IQueryable<Articulo> AsQueryable();
     }
 }

@@ -51,9 +51,8 @@ ctor -> Agregar el constructor
 * `<a asp-action="Bloquear" asp-route-id="@item.Id"> <i class="fas fa-lock-open"></i> </a>`
 * `<form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post">`
 * `<a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">No tienes cuenta? Registrate Aquí</a>`
-* 
-
-<a class="dropdown-item" asp-area="Admin" asp-controller="Categorias" asp-action="Index">Categorias</a>
+* `<input class="form-control me-sm-2 d-flex text-dark" asp-controller="Home" asp-action="resultadoBusqueda" method="get" placeholder="Ingresa lo que quieres buscar">`
+* `<a class="dropdown-item" asp-area="Admin" asp-controller="Categorias" asp-action="Index">Categorias</a>`
 
 
 #### **Uso de Include**
