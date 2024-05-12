@@ -140,3 +140,19 @@ Los repos instanciarlos dentro del constructor del UnitOfWork, y asi nos evitamo
 ![1715540574442](image/ImportanteARecordar/1715540574442.png)
 
 ### Proteger controladores
+
+Si se pone a nivel Controlador, aplica para todos los Action del controlador
+
+Si se pone a nivel de Action, sobreescribe lo que tenga a nivel de Controlador
+
+* Nivel de Controlador o de Action
+  * [Authorize]
+    * Cualquiera que este autenticado
+  * [Authorize("Administrador")]
+    * Solo el Rol Administrador
+  * [AllowAnonymous]
+    * Define un action como publico, cualquiera puede tener acceso
+
+![1715542994227](image/README/1715542994227.png)
+
+![1715541418167](image/ImportanteARecordar/1715541418167.png)

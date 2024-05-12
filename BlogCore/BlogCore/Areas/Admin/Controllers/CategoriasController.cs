@@ -1,11 +1,17 @@
 ﻿using BlogCore.AccesoDatos.Data.Repository.IRepository;
 using BlogCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogCore.Areas.Admin.Controllers
 {
 
     //==================================================================================================================
+    //                                                      //Namas protegemos solo con estar autenticado
+    //[Authorize]
+    //                                                      //Protegemos por Autenticacion de Rol "Administrador", 
+    //                                                      //    solo el administrador puede acceder a este controlador.
+    [Authorize(Roles = "Administrador")]
     [Area("Admin")]
     public class CategoriasController : Controller
     {
@@ -26,6 +32,10 @@ namespace BlogCore.Areas.Admin.Controllers
 
         //--------------------------------------------------------------------------------------------------------------
         //                                                  //Metodo sirve para mostrar el formulario
+        //                                                  //Por fines practicos, este va a ser publico, cualquiera
+        //                                                  //    puede acceder dado que tiene [AllowAnonymous], 
+        //                                                  //Sobreescribe a lo que tiene a nivel de controlador.
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Create()
         {

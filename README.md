@@ -909,6 +909,13 @@ Si accedo a un usuario bloqueado saldra lo siguiente
 
 ### Video 87 Protegiendo Acceso a Controladores
 
+![1715542994227](image/README/1715542994227.png)
+
+
+![1715542880446](image/README/1715542880446.png)
+
+
+
 ### Video 88 Protegiendo Roles en el Registro
 
 ### Video 89 Descarga los archivos fuente de esta seccion
