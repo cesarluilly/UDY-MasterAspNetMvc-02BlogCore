@@ -130,3 +130,7 @@ Los repos instanciarlos dentro del constructor del UnitOfWork, y asi nos evitamo
 ### Liga para ir a una pagina Razor que no tiene MVC (asp-area y asp-page)
 
 ![1715531669030](image/ImportanteARecordar/1715531669030.png)
+
+### Claims
+
+![1715536676291](image/ImportanteARecordar/1715536676291.png)

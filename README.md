@@ -885,9 +885,11 @@ Si accedo a un usuario bloqueado saldra lo siguiente
 
 ![1715535293260](image/README/1715535293260.png)
 
-
-
-
 ### Video 85 Esconder Usuario Autenticado
+
+* Modificamos el Action de Index
+  * ![1715536758204](image/README/1715536758204.png)
+* Corremos la app
+  * ![1715536932014](image/README/1715536932014.png)
 
 ### Video 86
