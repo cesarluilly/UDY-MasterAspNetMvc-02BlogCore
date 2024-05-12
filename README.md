@@ -738,7 +738,55 @@ Agregamos el Action Detalle
 
 ### Video 77 Introduccion
 
+![1715455636551](image/README/1715455636551.png)
+
+Identity se refiere al sistema de administracion de identidades que proporciona el marco para manejar la autenticacion y autorizacion y autorizacion de usuarios en una aplicacion web.
+
+Este sistema facilita a gestion de usuarios, la autenticacion, la autorizacion y otras caracteristicas relacionadas con la seguridad.
+
+Entonces podemos ver que Identity es un sistema completo, muy robusto y muy seguro para implementar todo lo que tiene que ver con la autenticacion y tambien con la autorizacion.
+
+La autorizacion trata de una ves de loguearme, ver a que puedo y a que no puedo acceder.
+
+Ver siguiente liga
+
+[https://learn.microsoft.com/es-es/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&amp;tabs=visual-studio](https://learn.microsoft.com/es-es/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&tabs=visual-studio)
+
+Cuando manejamos Identity, se van a crear las siguientes tablas
+
+![1715456296430](image/README/1715456296430.png)
+
+Podemos configurar muchas opciones
+
+![1715456407447](image/README/1715456407447.png)
+
+![1715457456796](image/README/1715457456796.png)
+
 ### Video 78 Scaffold Identity
+
+![1715457410845](image/README/1715457410845.png)
+
+Un Scaffold, se refiere a la generacion automatica de codigo para implementar ciertas caracteristicas o funcionalidades en una aplicacion web.
+
+![1715457685788](image/README/1715457685788.png)
+
+![1715457789835](image/README/1715457789835.png)
+
+![1715457988886](image/README/1715457988886.png)
+
+Despues de que termine su proceso, vamos a ver varias paginas creadas y estas paginas yo ya los puedo personalizar, etc.
+
+![1715458250577](image/README/1715458250577.png)
+
+Hay que aclarar que **Identity utiliza el sistema Razor** es por eso que aqui no vamos a encontrar controladores, a diferencia de MVC que Existen los controladores y esos tiene metodos y a su ves vistas.
+
+Entonces en Razor tenemos el archivo C# asociado a la vista directamente, .
+
+* MVC
+  * ![1715476682877](image/ImportanteARecordar/1715476682877.png)
+* Razor
+  * ![1715476832213](image/README/1715476832213.png)
+
 
 ### Video 79 Agregar Campos al Identity
 

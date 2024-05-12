@@ -56,3 +56,10 @@ El método `@Html.Raw()` en ASP.NET MVC es útil cuando necesitas renderizar HTM
 ![1715439375571](image/README/1715439375571.png)
 
 ![1715439317277](image/ImportanteARecordar/1715439317277.png)
+
+### Diferencia entre Razor y MVC
+
+* En MVC se tienen los controladores, metodos(Action) y Vistas
+  * ![1715476682877](image/ImportanteARecordar/1715476682877.png)
+* Razor es un archivo cshtml con su archivo ligado directamente
+  * ![1715476832213](image/README/1715476832213.png)
