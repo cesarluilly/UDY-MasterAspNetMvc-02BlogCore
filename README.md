@@ -797,6 +797,23 @@ Entonces en Razor tenemos el archivo C# asociado a la vista directamente, .
 
 ### Video 80 Registro de Usuarios
 
+* Vamos al archivo Registr.cshtml y personalizamos y agregamos los inputs para las nuevas propiedades de `ApplicationUser`
+  * ![1715485819309](image/README/1715485819309.png)
+* Vamos a su archivo asociado de C# de Register.cshtml, y en todos los lugares donde utilize `IdentityUser` hay que cambiarlo por `ApplicationUser`
+  * ![1715485912985](image/README/1715485912985.png)
+* Vamos a la clase interna `InputModel` y agregamos las propiedades nuevas, para eso hacemos un copy paste de lo que hay dentro de `ApplicationUser`
+  * ![1715485978853](image/README/1715485978853.png)
+* Asignamos los valores para que se puedan guardar
+  * ![1715486060202](image/README/1715486060202.png)
+* Abrimos el archivo C# asociado a Login.cshtml y reemplazamos `IdentityUser` por `ApplicationUser` en todos los lugares de la solucion a excepcion del `_ManageNav`(ahi no se cambia)
+  * ![1715481135301](image/README/1715481135301.png)
+* Asignamos valores de los campos personalizados para que se puedan guardar en la Base de Datos
+  * ![1715484932770](image/README/1715484932770.png)
+* Corremos
+  * ![1715486124462](image/README/1715486124462.png)
+* Revisamos la Data en SQL
+  * ![1715486159228](image/README/1715486159228.png)
+
 ### Video 81 Ajustes en Layout Acceso
 
 ### Video 82 Acceso Login de Usuarios

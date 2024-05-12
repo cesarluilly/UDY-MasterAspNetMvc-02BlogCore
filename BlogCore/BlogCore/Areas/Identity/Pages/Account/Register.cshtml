@@ -1,15 +1,15 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Registro";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="text-center">@ViewData["Title"]</h1>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6 offset-3">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
+            <h2>Crear una nueva cuenta</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
             <div class="form-floating mb-3">
@@ -17,6 +17,37 @@
                 <label asp-for="Input.Email">Email</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Nombre" class="form-control" autocomplete="nombre" aria-required="true" placeholder="ingrese el nombre" />
+                <label asp-for="Input.Nombre">Nombre</label>
+                <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Direccion" class="form-control" autocomplete="direccion" aria-required="true" placeholder="ingresa la direccion" />
+                <label asp-for="Input.Direccion">Direccion</label>
+                <span asp-validation-for="Input.Direccion" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Ciudad" class="form-control" autocomplete="ciudad" aria-required="true" placeholder="ingresa la ciudad" />
+                <label asp-for="Input.Ciudad">Ciudad</label>
+                <span asp-validation-for="Input.Ciudad" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Pais" class="form-control" autocomplete="pais" aria-required="true" placeholder="ingresa el pais" />
+                <label asp-for="Input.Pais">Pais</label>
+                <span asp-validation-for="Input.Pais" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" autocomplete="direccion" aria-required="true" placeholder="ingresa el telefono" />
+                <label asp-for="Input.PhoneNumber">Telefono</label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.Password">Password</label>
@@ -27,10 +58,12 @@
                 <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Registro</button>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    @*                                                      //Ahorita no vamos a trabajar con Autenticacion Externa y 
+    //                                                      //    es por eso que el codigo se va a comentar *@
+    @* <div class="col-md-6 col-md-offset-2">
         <section>
             <h3>Use another service to register.</h3>
             <hr />
@@ -59,7 +92,7 @@
                 }
             }
         </section>
-    </div>
+    </div> *@
 </div>
 
 @section Scripts {
