@@ -974,6 +974,14 @@ Copiamos la escructura anterior de paginacion y lo adecuamos a este model
 
 ### Video 94 Personalizar Sitio Web
 
+![1715564645935](image/README/1715564645935.png)
+
+![1715564770154](image/README/1715564770154.png)
+
+![1715565200957](image/README/1715565200957.png)
+
+![1715565594176](image/README/1715565594176.png)
+
 ### Video 95 Descarga los archivos fuente de esta seccion
 
 ## Seccion 13: BlogCore: Siembra de Datos (Seeding)
