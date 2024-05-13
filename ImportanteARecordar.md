@@ -1,12 +1,12 @@
-#### Borramos cache con Ctrl + F5
+### Borramos cache con Ctrl + F5
 
-#### Snippets C#
+### Snippets C#
 
 prop -> Agregar una propiedad de instancia
 
 ctor -> Agregar el constructor
 
-#### Temas Generales
+### Temas Generales
 
 * Nombre de Controladores va en Plural
 * Nombre de Tablas o Modelo va en Singular
