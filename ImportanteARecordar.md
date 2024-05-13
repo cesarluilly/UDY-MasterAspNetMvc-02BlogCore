@@ -173,4 +173,14 @@ Si se pone a nivel de Action, sobreescribe lo que tenga a nivel de Controlador
 
 ### Clase interesante para Paginacion
 
+Es interesante porque es como si se comportara como una lista de elementos, pero a su ves como si se comportara como una clase.
+
 ![1715554822421](image/ImportanteARecordar/1715554822421.png)
+
+![1715559722823](image/ImportanteARecordar/1715559722823.png)
+
+![1715559798756](image/ImportanteARecordar/1715559798756.png)
+
+### Segunda Forma de Realizar Paginacion
+
+![1715559967295](image/ImportanteARecordar/1715559967295.png)

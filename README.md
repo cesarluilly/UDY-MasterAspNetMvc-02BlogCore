@@ -959,10 +959,18 @@ Agregamos codigo HTML a la Vista "ResultadoBusqueda"
 ![1715554666885](image/README/1715554666885.png)
 
 
-
-
-
 ### Video 93 Paginacion de Articulos en Inicio
+
+![1715559422730](image/README/1715559422730.png)
+
+![1715559343027](image/README/1715559343027.png)
+
+Copiamos la escructura anterior de paginacion y lo adecuamos a este model
+
+![1715559390878](image/README/1715559390878.png)
+
+![1715559460630](image/README/1715559460630.png)
+
 
 ### Video 94 Personalizar Sitio Web
 

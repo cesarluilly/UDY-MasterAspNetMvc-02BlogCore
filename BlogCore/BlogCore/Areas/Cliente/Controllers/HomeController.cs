@@ -3,6 +3,7 @@ using BlogCore.Models;
 using BlogCore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Drawing.Printing;
 
 namespace BlogCore.Areas.Cliente.Controllers
 {
@@ -20,12 +21,41 @@ namespace BlogCore.Areas.Cliente.Controllers
         }
 
         //--------------------------------------------------------------------------------------------------------------
-        public IActionResult Index()
+        //                                                  //Primera Version de Inicio sin paginacion.
+        //[HttpGet]
+        //public IActionResult Index()
+        //{
+        //    HomeVM homeVM = new HomeVM()
+        //    {
+        //        Sliders = _unitOfWork.SliderRepo.GetAll(),
+        //        ListArticulos = _unitOfWork.ArticuloRepo.GetAll()
+        //    };
+
+        //    //                                              //Esta línea es para poder saber si estamos
+        //    //                                              //    en el home o no
+        //    ViewBag.IsHome = true;
+
+        //    return View(homeVM);
+        //}
+
+        //--------------------------------------------------------------------------------------------------------------
+        //                                                  //Segunda Version pagina de Inicio con Paginacion
+        [HttpGet]
+        public IActionResult Index(int page = 1, int pageSize = 4)
         {
+            var articulos = _unitOfWork.ArticuloRepo.AsQueryable();
+
+            //                                              //Paginar los resultados.
+            //                                              //Skip es para omitir elementos.
+            //                                              //Take tomo n cantidade de elementos despues de haber omitido.
+            var paginatedEntries = articulos.Skip((page - 1) * pageSize).Take(pageSize);
+
             HomeVM homeVM = new HomeVM()
             {
                 Sliders = _unitOfWork.SliderRepo.GetAll(),
-                ListArticulos = _unitOfWork.ArticuloRepo.GetAll()
+                ListArticulos = paginatedEntries.ToList(),
+                PageIndex = page, 
+                TotalPages = (int)(Math.Ceiling(articulos.Count() / (double)pageSize))
             };
 
             //                                              //Esta línea es para poder saber si estamos
@@ -50,7 +80,7 @@ namespace BlogCore.Areas.Cliente.Controllers
             }
 
             //                                              //Paginar los resultados.
-            var paginatedEntries = articulos.Skip((page - 1) * page).Take(pageSize);
+            var paginatedEntries = articulos.Skip((page - 1) * pageSize).Take(pageSize);
 
             //                                              //Crear modelo de la vista.
             var model = new ListaPaginada<Articulo>(paginatedEntries.ToList(), articulos.Count(), page, pageSize, searchString);
