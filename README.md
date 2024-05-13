@@ -982,6 +982,8 @@ Copiamos la escructura anterior de paginacion y lo adecuamos a este model
 
 ![1715565594176](image/README/1715565594176.png)
 
+![1715565985257](image/README/1715565985257.png)
+
 ### Video 95 Descarga los archivos fuente de esta seccion
 
 ## Seccion 13: BlogCore: Siembra de Datos (Seeding)
